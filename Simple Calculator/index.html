@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" src="index.js"></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <center>
+      <form class="container" action=" ">
+        <h1><u>Groceries items</u></h1>
+        <table cellspacing="10vh" cellpadding="10px">
+          <tr  style="padding: 0.4em;">
+            
+            <th><h2>Item</h2></th>
+            <th><h2>Price</h2></th>
+            <th><h2>Quantity(Kg)</h2></th>
+          
+          </tr>
+          <tr>
+            <th>Rice</th>
+            <td>Rs. 52</td>
+            <td><input type="text" id="rice" size="2" /></td>
+          </tr>
+          <th>Pulse</th>
+            <td>Rs. 108</td>
+            <td><input type="text" id="pulse" size="2" /></td>
+          </tr>
+          <tr>
+            <th>Vegetables</th>
+            <td>Rs. 100</td>
+            <td><input type="text" id="vej" size="2" /></td>
+          </tr>
+          <tr>
+            <th>masalas</th>
+            <td>Rs. 50</td>
+            <td><input type="text" id="masala" size="2" /></td>
+          </tr>
+          <tr>
+            <th>Ghee</th>
+            <td>Rs. 200</td>
+            <td><input type="text" id="ghee" size="2" /></td>
+          </tr>
+          <tr>
+            <th>snaks</th>
+            <td>Rs. 100</td>
+            <td><input type="text" id="snak" size="2"/></td>
+          </tr>
+        <br>   
+          </table>
+        <br /><br />
+        <p>
+          <input type="button" value="Total Cost" onclick="computeCost();" />
+          <input type="text" size="5" id="print" onfocus="this.blur();" />
+        </p>
+        <br />
+        <p>
+          <input type="submit" value="Submit Order" />
+          <input type="reset" value="Clear Order Form" />
+        </p>
+      </form>
+    </center>
+  </body>
+</html>

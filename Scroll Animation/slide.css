@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f242d;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.animate {
+  transition: 1s;
+  font-size: 2em;
+  color: white;
+}
+
+.sec-1 {
+  height: fit-content;
+}
+.sec-1 .animate {
+  transform: translateY(-40vh);
+  opacity: 0;
+}
+.sec-1.show .animate {
+  transform: translateY(0);
+  display: block;
+  opacity: 1;
+}
+.sec-2 .animate {
+  transform: translateX(40vw);
+  opacity: 0;
+}
+.sec-2.show .animate {
+  transform: translateX(0);
+  opacity: 1;
+}
+.sec-3 .animate {
+  transform: translateX(-40vw);
+  opacity: 0;
+}
+.sec-3.show .animate {
+  transform: translateX(0);
+  opacity: 1;
+}
+.sec-4 .animate {
+  transform: translateX(40vw);
+}
+.sec-4.show .animate {
+  transform: translateX(0);
+}

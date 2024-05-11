@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit converter</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="dribble_2.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>Unit converter</header>
+    <div class="container-1">
+      <span class="options" id="cur" data-unit="Currency"
+        ><i class="fa-solid fa-dollar-sign"></i> Currency</span
+      >
+      <span class="options" id="len" data-unit="Length"
+        ><i class="fa-solid fa-arrows-left-right"></i> Length</span
+      >
+      <span class="options" id="vol" data-unit="Volume"
+        ><i class="fa-solid fa-cube"></i> Volume</span
+      >
+      <span class="options" id="wei" data-unit="Weight"
+        ><i class="fa-solid fa-weight-hanging"></i> Weight</span
+      >
+      <span class="options" id="tem" data-unit="Temperature"
+        ><i class="fa-solid fa-temperature-half"></i> Temperature</span
+      >
+      <span class="options" id="spe" data-unit="Speed"
+        ><i class="fa-solid fa-gauge-simple-high"></i> Speed</span
+      >
+      <span class="options" id="pre" data-unit="Pressure"
+        ><i class="fa-solid fa-stopwatch"></i> Pressure</span
+      >
+      <span class="options" id="pow" data-unit="Power"
+        ><i class="fa-solid fa-cloud-bolt"></i> Power</span
+      >
+      <span class="options" id="are" data-unit="Area"
+        ><i class="fa-solid fa-chart-area"></i> Area</span
+      >
+    </div>
+    <br />
+    <center><hr width="80%" color="black" /></center>
+    <div class="container-2">
+      <!-- currency -->
+      <div class="boxes" id="CurrencyBox">
+        <h2 id="box-heading">
+          <i class="fa-solid fa-dollar-sign"></i> Currency
+        </h2>
+        <!-- input -->
+        <input
+          placeholder="Enter value here:"
+          class="input-style"
+          id="input-first-val-curr"
+          type="text" />
+        <!-- from -->
+        <select class="drop-style" id="from-currency">
+          <option value="">choose</option>
+          <option value="Indian">INR - Rupee</option>
+          <option value="us">USD - United States Dollar</option>
+          <option value="GBP">GBP - British Pound Sterling</option>
+          <option value="EUR">EUR - Euro</option>
+          <option value="JPY">JPY - Japanese Yen</option>
+        </select>
+        <!-- result -->
+        <input
+          placeholder="Result"
+          class="input-style"
+          id="curr-result"
+          type="text"
+          readonly />
+        <!-- to -->
+        <select class="drop-style" id="to-currency">
+          <option value="Indian">INR - Rupee</option>
+          <option value="us">USD - United States Dollar</option>
+          <option value="GBP">GBP - British Pound Sterling</option>
+          <option value="EUR">EUR - Euro</option>
+          <option value="JPY">JPY - Japanese Yen</option>
+        </select>
+        <br />
+        <!-- button -->
+        <button
+          class="currency-convert-button convert-btn"
+          onclick="currency_fun()">
+          CONVERT
+        </button>
+      </div>
+      <!-- length -->
+      <div class="boxes" id="LengthBox">
+        <h2 id="box-heading">
+          <i class="fa-solid fa-arrows-left-right"></i> Length
+        </h2>
+        <!-- input -->
+        <input
+          placeholder="Enter value here:"
+          class="input-style"
+          id="input-first-val-len"
+          type="text" />
+        <!-- from -->
+        <select id="from-length" class="drop-style">
+          <option value="">choose</option>
+          <option value="mm">millimeter (mm)</option>
+          <option value="cm">centimeter (cm)</option>
+          <option value="m">meter (m)</option>
+          <option value="km">kilometer (km)</option>
+          <option value="in">inch (in)</option>
+          <option value="ft">foot (ft)</option>
+          <option value="mi">mile (mi)</option>
+        </select>
+        <!-- result -->
+        <input
+          placeholder="Result"
+          class="input-style"
+          id="len-result"
+          type="text"
+          readonly />
+        <!-- to -->
+        <select id="to-length" class="drop-style">
+          <option value="">choose</option>
+          <option value="mm">millimeter (mm)</option>
+          <option value="cm">centimeter (cm)</option>
+          <option value="m">meter (m)</option>
+          <option value="km">kilometer (km)</option>
+          <option value="in">inch (in)</option>
+          <option value="ft">foot (ft)</option>
+          <option value="mi">mile (mi)</option>
+        </select>
+        <br />
+        <!-- button -->
+        <button
+          class="length-convert-button convert-btn"
+          onclick="length_fun()">
+          CONVERT
+        </button>
+      </div>
+      <!-- volume -->
+      <div class="boxes" id="VolumeBox">
+        <h2 id="box-heading"><i class="fa-solid fa-cube"></i> Volume</h2>
+        <!-- input -->
+        <input
+          placeholder="Enter value here:"
+          class="input-style"
+          id="input-first-val-volume"
+          type="text" />
+        <!-- from -->
+        <select id="from-vol" class="drop-style">
+          <option value="">choose</option>
+          <option value="ml">Milliliter (mL)</option>
+          <option value="l">Liter (L)</option>
+          <option value="cm3">Cubic centimeter (cm³)</option>
+          <option value="m3">Cubic meter (m³)</option>
+          <option value="gal">Gallon (gal)</option>
+        </select>
+        <!-- result -->
+        <input
+          placeholder="Result"
+          class="input-style"
+          id="vol-result"
+          type="text" />
+        <!-- to -->
+        <select id="to-vol" class="drop-style">
+          <option value="">choose</option>
+          <option value="ml">Milliliter (mL)</option>
+          <option value="l">Liter (L)</option>
+          <option value="cm3">Cubic centimeter (cm³)</option>
+          <option value="m3">Cubic meter (m³)</option>
+          <option value="gal">Gallon (gal)</option>
+        </select>
+        <br />
+        <!-- button -->
+        <button onclick="volume()" class="convert-btn">CONVERT</button>
+      </div>
+      <!-- weight -->
+      <div class="boxes" id="WeightBox">
+        <h2 id="box-heading">
+          <i class="fa-solid fa-weight-hanging"></i> Weight
+        </h2>
+        <!-- input -->
+        <input
+          placeholder="Enter value here:"
+          class="input-style"
+          id="input-first-val-weigh"
+          type="text" />
+        <!-- from -->
+        <select id="from-weight" class="drop-style">
+          <option value="">choose</option>
+          <option value="kg">Kilogram (kg)</option>
+          <option value="g">Gram (g)</option>
+          <option value="mg">Milligram (mg)</option>
+          <option value="tonne">Metric Ton (tonne)</option>
+          <option value="lb">Pound (lb)</option>
+          <option value="oz">Ounce (oz)</option>
+        </select>
+        <!-- result -->
+        <input
+          placeholder="Result"
+          class="input-style input-first-val"
+          id="weight-result"
+          type="text"
+          readonly />
+        <!-- to -->
+        <select id="to-weight" class="drop-style">
+          <option value="">choose</option>
+          <option value="kg">Kilogram (kg)</option>
+          <option value="g">Gram (g)</option>
+          <option value="mg">Milligram (mg)</option>
+          <option value="tonne">Metric Ton (tonne)</option>
+          <option value="lb">Pound (lb)</option>
+          <option value="oz">Ounce (oz)</option>
+        </select>
+        <br />
+        <button onclick="weight_fun()" class="convert-btn">CONVERT</button>
+      </div>
+      <!-- tempereture -->
+      <div class="boxes" id="TemperatureBox">
+        <h2 id="box-heading">
+          <i class="fa-solid fa-temperature-half"></i> Temperature
+        </h2>
+        <input
+          placeholder="Enter value here:"
+          class="input-style input-first-val"
+          id="userval"
+          type="text" />
+        <select name="Currency" class="drop-style">
+          <option value="">choose</option>
+          <option value="Indian(rs)">Rupeese</option>
+          <option value="us($)">Dollar</option>
+          <option value="jap(yen)">japnese yen</option>
+        </select>
+        <input
+          placeholder="Result"
+          class="input-style input-first-val"
+          id="userval"
+          type="text" />
+        <select name="Currency" class="drop-style">
+          <option value="">choose</option>
+          <option value="Indian(rs)">Rupeese</option>
+          <option value="us($)">Dollar</option>
+          <option value="jap(yen)">japnese yen</option>
+        </select>
+        <br />
+        <button class="convert-btn">CONVERT</button>
+      </div>
+      <!-- speed -->
+      <div class="boxes" id="SpeedBox">
+        <h2 id="box-heading">
+          <i class="fa-solid fa-gauge-simple-high"></i> Speed
+        </h2>
+        <input
+          placeholder="Enter value here:"
+          class="input-style input-first-val"
+          id="userval"
+          type="text" />
+        <select name="Currency" class="drop-style">
+          <option value="">choose</option>
+          <option value="Indian(rs)">Rupeese</option>
+          <option value="us($)">Dollar</option>
+          <option value="jap(yen)">japnese yen</option>
+        </select>
+        <input
+          placeholder="Result"
+          class="input-style input-first-val"
+          id="userval"
+          type="text" />
+        <select name="Currency" class="drop-style">
+          <option value="">choose</option>
+          <option value="Indian(rs)">Rupeese</option>
+          <option value="us($)">Dollar</option>
+          <option value="jap(yen)">japnese yen</option>
+        </select>
+        <br />
+        <button class="convert-btn">CONVERT</button>
+      </div>
+      <!-- pressure -->
+      <div class="boxes" id="PressureBox">
+        <h2 id="box-heading"><i class="fa-solid fa-stopwatch"></i> Pressure</h2>
+        <input
+          placeholder="Enter value here:"
+          class="input-style input-first-val"
+          id="userval"
+          type="text" />
+        <select name="Currency" class="drop-style">
+          <option value="">choose</option>
+          <option value="Indian(rs)">Rupeese</option>
+          <option value="us($)">Dollar</option>
+          <option value="jap(yen)">japnese yen</option>
+        </select>
+        <input
+          placeholder="Result"
+          class="input-style input-first-val"
+          id="userval"
+          type="text" />
+        <select name="Currency" class="drop-style">
+          <option value="">choose</option>
+          <option value="Indian(rs)">Rupeese</option>
+          <option value="us($)">Dollar</option>
+          <option value="jap(yen)">japnese yen</option>
+        </select>
+        <br />
+        <button class="convert-btn">CONVERT</button>
+      </div>
+      <!-- power -->
+      <div class="boxes" id="PowerBox">
+        <h2 id="box-heading"><i class="fa-solid fa-cloud-bolt"></i> Power</h2>
+        <input
+          placeholder="Enter value here:"
+          class="input-style input-first-val"
+          id="userval"
+          type="text" />
+        <select name="Currency" class="drop-style">
+          <option value="">choose</option>
+          <option value="Indian(rs)">Rupeese</option>
+          <option value="us($)">Dollar</option>
+          <option value="jap(yen)">japnese yen</option>
+        </select>
+        <input
+          placeholder="Result"
+          class="input-style input-first-val"
+          id="userval"
+          type="text" />
+        <select name="Currency" class="drop-style">
+          <option value="">choose</option>
+          <option value="Indian(rs)">Rupeese</option>
+          <option value="us($)">Dollar</option>
+          <option value="jap(yen)">japnese yen</option>
+        </select>
+        <br />
+        <button class="convert-btn">CONVERT</button>
+      </div>
+      <!-- area -->
+      <div class="boxes" id="AreaBox">
+        <h2 id="box-heading"><i class="fa-solid fa-chart-area"></i> Area</h2>
+        <input
+          placeholder="Enter value here:"
+          class="input-style input-first-val"
+          id="userval"
+          type="text" />
+        <select name="Currency" class="drop-style">
+          <option value="">choose</option>
+          <option value="Indian(rs)">Rupeese</option>
+          <option value="us($)">Dollar</option>
+          <option value="jap(yen)">japnese yen</option>
+        </select>
+        <input
+          placeholder="Result"
+          class="input-style input-first-val"
+          id="userval"
+          type="text" />
+        <select name="Currency" class="drop-style">
+          <option value="">choose</option>
+          <option value="Indian(rs)">Rupeese</option>
+          <option value="us($)">Dollar</option>
+          <option value="jap(yen)">japnese yen</option>
+        </select>
+        <br />
+        <button class="convert-btn">CONVERT</button>
+      </div>
+    </div>
+    <!-- myself -->
+
+    <div class="msg">
+      <div id="data">Select any of the above Unit.</div>
+      <div id="button">↑</div>
+    </div>
+    <footer>
+      <div class="card-client">
+        <p class="name-client">
+          Akash Ranjan
+          <span>Owner of the project </span>
+        </p>
+        <div class="social-media">
+          <a href="https://www.instagram.com/akash_ranjan_ar/">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path
+                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+            </svg>
+            <span class="tooltip-social">Instagram</span>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=100068332577387">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path
+                d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path>
+            </svg>
+            <span class="tooltip-social">Facebook</span>
+          </a>
+          <a href="https://www.linkedin.com/in/akash-ranjan-9aa338259/">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path
+                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path>
+            </svg>
+            <span class="tooltip-social">LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <!-- end myself -->
+    <script src="index.js"></script>
+  </body>
+</html>

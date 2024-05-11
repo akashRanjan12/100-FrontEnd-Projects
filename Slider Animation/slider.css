@@ -1,0 +1,42 @@
+.slider-01 {
+  overflow: hidden;
+  position: relative;
+}
+.slide {
+  height: 70vh;
+  width: 400%;
+  transition: transform 0.3s ease-in; /* Use transform for smoother transitions */
+  display: flex; /* Use flexbox to align slides horizontally */
+}
+.slider-image {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.slider-image::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%; /* Adjust the height of the whitened area */
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+#img0 {
+  height: 610px;
+}
+.controler {
+  height: 220px;
+  width: 60px;
+  font-size: 2em;
+  color: rgb(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Standard Calculator</h1>
+    <div class="box">
+      <div class="container">
+        <input type="text" id="first-no" placeholder="Enter first number:" />
+        <input
+          type="text"
+          id="second-no"
+          placeholder="Enter second number:" /><br />
+        <input type="text" id="result-store" placeholder="Result    " /><br />
+        <button id="add" onclick="sum()"><i class="fa fa-plus"></i></button>
+        <button id="sub" onclick="sub()"><i class="fa fa-minus"></i></button>
+        <button id="mul" onclick="mult()">
+          <i class="fa fa-multiply"></i>
+        </button>
+        <button id="div" onclick="div()"><i class="fa fa-divide"></i></button
+        ><br />
+        <button id="square" onclick="square()">^</button>
+        <button id="root" onclick="root()">
+          <i class="fa-solid fa-square-root-variable"></i>
+        </button>
+        <button id="fact" onclick="fact()">
+          <i class="fa-solid fa-exclamation"></i>
+        </button>
+        <br />
+        <input type="reset" id="reset" onclick="reset()" />
+        <section>
+          <div class="circle1 circle"></div>
+          <div class="circle2 circle"></div>
+        </section>
+      </div>
+    </div>
+    <marquee behavior="" direction="left"
+      ><font size="2.5em" color="white"
+        >note:- In square, square root and factorial let input only in "Enter
+        First Number" textbox.</font
+      ></marquee
+    >
+    <script src="cal.js"></script>
+  </body>
+</html>

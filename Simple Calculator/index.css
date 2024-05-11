@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background: linear-gradient(60deg, orange 0%, purple 50%, red 100%);
+}
+.container {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255, 255, 255, 0.3);
+  position: relative;
+  bottom: -68px;
+}
+input {
+  height: 7vh;
+  width: 15vw;
+  border: none;
+  background-color: rgb(132, 0, 255, 0.5);
+  color: white;
+  text-align: center;
+}
+h1:hover {
+  background-color: rgb(255, 0, 0, 0.3);
+}
+th:hover,
+td:hover {
+  background-color: rgb(255, 0, 0);
+}

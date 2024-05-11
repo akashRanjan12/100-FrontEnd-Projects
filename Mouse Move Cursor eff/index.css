@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: black;
+  overflow: hidden;
+}
+.cont {
+  height: 100vh;
+  width: 100%;
+}
+span {
+  height: 40px;
+  width: 40px;
+  background-color: cyan;
+  border-radius: 50%;
+  box-shadow: 10px 10px 8px cyan;
+  /* main */
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: animate 6s linear;
+}
+/* to make smooth */
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    filter: hue-rotate(0);
+  }
+  100% {
+    transform: translate(-50%, -5000%);
+    opacity: 0;
+    filter: hue-rotate(720deg);
+  }
+}
