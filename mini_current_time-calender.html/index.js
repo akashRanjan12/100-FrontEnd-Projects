@@ -11,5 +11,5 @@ monthEl.innerHTML = date.toLocaleString("eng", {
 weekEl.innerHTML = date.toLocaleString("eng", {
   weekday: "long",
 });
-dateEl.innerHTML = date.getDay();
+dateEl.innerHTML = date.getDate();
 yearEl.innerHTML = date.getFullYear();
