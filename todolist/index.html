@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>todo</title>
+  </head>
+  <body>
+    <div class="todo-container">
+      <input type="text" onkeydown="keyevent(event)" />
+      <input type="date" class="date" required />
+      <button onclick="getlist()">Add</button>
+      <div class="tododata"></div>
+    </div>
+    <script>
+      var todoval = [
+        {
+          name: "",
+          date: "",
+        },
+      ];
+      function getlist() {
+        var name = document.querySelector("input").value;
+        var date = document.querySelector(".date").value;
+        todoval.push({
+          name,
+          date,
+        });
+        document.querySelector("input").value = " ";
+        looptodo();
+      }
+
+      function looptodo() {
+        var todohtmlval = "";
+        for (let i = 1; i < todoval.length; i++) {
+          var todoobjval = todoval[i];
+          var { name, date } = todoobjval;
+
+          var htmlval = `<p>${name} ${date} <button onclick="
+            todoval.splice(${i},1 );
+            looptodo();
+            ">Delete</button><p>`;
+          todohtmlval += htmlval;
+        }
+        document.querySelector(".tododata").innerHTML = todohtmlval;
+      }
+      looptodo();
+      function keyevent(event) {
+        if (event.key === "Enter") {
+          getlist();
+        }
+      }
+    </script>
+  </body>
+</html>

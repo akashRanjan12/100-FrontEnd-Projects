@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .boxes {
+        height: 100px;
+        width: 100px;
+        display: none;
+        border: 2px solid green;
+      }
+      .first-box {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn-01" onclick="appearbox1()">btn-01</button>
+    <button class="btn-02" onclick="appearbox2()">btn-02</button>
+    <button class="btn-03" onclick="appearbox3()">btn-03</button>
+    <div
+      class="main-box"
+      style="
+        border: 2px solid red;
+        height: 200px;
+        width: 400px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      ">
+      <div class="boxes box-01">box-01</div>
+      <div class="boxes box-02">box-02</div>
+      <div class="boxes box-03">box-03</div>
+      <div class="first-box box-04">box-04</div>
+    </div>
+  </body>
+  <script>
+    function appearbox1() {
+      document.querySelector(".main-box").insertAdjacentElement =
+        document.querySelector(".box-01");
+      document.querySelector(".box-01").style.display = "block";
+      document.querySelector(".box-02").style.display = "none";
+      document.querySelector(".box-03").style.display = "none";
+      document.querySelector(".box-04").style.display = "none";
+    }
+    function appearbox2() {
+      document.querySelector(".main-box").insertAdjacentElement =
+        document.querySelector(".box-02");
+      document.querySelector(".box-02").style.display = "block";
+      document.querySelector(".box-01").style.display = "none";
+      document.querySelector(".box-03").style.display = "none";
+      document.querySelector(".box-04").style.display = "none";
+    }
+    function appearbox3() {
+      document.querySelector(".main-box").insertAdjacentElement =
+        document.querySelector(".box-03");
+      document.querySelector(".box-03").style.display = "block";
+      document.querySelector(".box-01").style.display = "none";
+      document.querySelector(".box-02").style.display = "none";
+      document.querySelector(".box-04").style.display = "none";
+    }
+  </script>
+</html>

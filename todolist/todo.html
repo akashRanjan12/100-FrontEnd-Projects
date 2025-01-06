@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDoList</title>
+    <style>
+      .box1 {
+        display: flex;
+        gap: 20px;
+        input {
+          height: 30px;
+        }
+        button {
+          padding: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <input type="text" class="input" />
+      <input type="date" calss="date" />
+      <button id="addbtn">ADD</button>
+    </div>
+    <div class="getnewdata"></div>
+    <script>
+      var objval = [
+        {
+          todo: "",
+          date: "",
+        },
+      ];
+      var addEl = document.getElementById("addbtn");
+      addEl.addEventListener("click", () => {
+        var inputEl = document.querySelector(".input").value;
+        var inputEl = document.querySelector(".date").value;
+
+        objval.push({
+          todo,
+          date,
+        });
+        document.querySelector(".input").value = "";
+      });
+    </script>
+  </body>
+</html>

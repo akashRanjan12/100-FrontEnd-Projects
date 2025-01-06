@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background-repeat: no-repeat;
+        background-image: radial-gradient(
+            circle at 70% 18%,
+            hsla(126, 0%, 77%, 0.05) 0%,
+            hsla(126, 0%, 77%, 0.05) 41%,
+            transparent 41%,
+            transparent 100%
+          ),
+          radial-gradient(
+            circle at 6% 94%,
+            hsla(126, 0%, 77%, 0.05) 0%,
+            hsla(126, 0%, 77%, 0.05) 52%,
+            transparent 52%,
+            transparent 100%
+          ),
+          radial-gradient(
+            circle at 93% 63%,
+            hsla(126, 0%, 77%, 0.05) 0%,
+            hsla(126, 0%, 77%, 0.05) 85%,
+            transparent 85%,
+            transparent 100%
+          ),
+          radial-gradient(
+            circle at 5% 85%,
+            hsla(126, 0%, 77%, 0.05) 0%,
+            hsla(126, 0%, 77%, 0.05) 8%,
+            transparent 8%,
+            transparent 100%
+          ),
+          radial-gradient(
+            circle at 49% 93%,
+            hsla(126, 0%, 77%, 0.05) 0%,
+            hsla(126, 0%, 77%, 0.05) 37%,
+            transparent 37%,
+            transparent 100%
+          ),
+          linear-gradient(45deg, rgb(15, 5, 113), rgb(191, 90, 222));
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        gap: 20px;
+      }
+      #enterValue {
+        height: 37px;
+        width: 250px;
+        background-color: rgba(255, 255, 255, 0.261);
+        font-size: 1.2em;
+        border: none;
+        border-radius: 5px;
+        cursor: text;
+      }
+      button {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: black;
+        color: white;
+        font-size: 1.2em;
+        cursor: pointer;
+      }
+      button:active {
+        background-color: white;
+        color: black;
+      }
+      p {
+        font-size: 1.8em;
+        color: white;
+        cursor: copy;
+      }
+      /* change selected text background color */
+      ::selection {
+        color: white;
+        background-color: orange;
+      }
+      ::-moz-selection {
+        color: white;
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>AMAZON SHIPPING CAL</h1>
+    <input id="enterValue" onkeydown="keypress(event)" type="text" required />
+    <button onclick="cal()">calculate</button>
+    <p id="result">Result:</p>
+    <script>
+      function keypress(event) {
+        if (event.key === "Enter") {
+          cal();
+        }
+      }
+      function cal() {
+        var numEl = Number(document.querySelector("#enterValue").value);
+        var res = 0;
+
+        if (numEl < 40) {
+          res = numEl + 10;
+        } else {
+          res = numEl;
+        }
+
+        if (numEl > 0) {
+          document.querySelector("#result").innerHTML = `Result: ${res.toFixed(
+            2
+          )}`;
+        } else if (!numEl) {
+          document.querySelector("#result").innerHTML =
+            "value is required. Please enter coast.";
+        } else {
+          document.getElementById("result").innerHTML =
+            "The coast must be greater than 0";
+        }
+      }
+    </script>
+  </body>
+</html>
