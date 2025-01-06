@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        --s: 60px; /* control the size */
+
+        --_g: #0000 99%, whitesmoke 85% 99%, #0000 101%;
+        background: radial-gradient(27% 29% at right, var(--_g))
+            calc(var(--s) / 2) var(--s),
+          radial-gradient(27% 29% at left, var(--_g)) calc(var(--s) / -2)
+            var(--s),
+          radial-gradient(29% 27% at top, var(--_g)) 0 calc(var(--s) / 2),
+          radial-gradient(29% 27% at bottom, var(--_g)) 0 calc(var(--s) / -2)
+            black;
+        background-size: calc(2 * var(--s)) calc(2 * var(--s));
+      }
+    </style>
+  </head>
+  <body></body>
+</html>
