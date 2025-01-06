@@ -1362,26 +1362,42 @@
           <p>Fill out the and get a Query.</p>
         </div>
         <div class="form-container">
+          <h1>Contact Us.</h1>
           <form
-            class="form"
-            action="https://api.web3forms.comn/submit"
-            method="POST">
-            <input type="hidden" name="access key" value="" />
-            <div class="form-group">
-              <label for="email">Your E-mail</label>
-              <input type="text" id="email" name="email" required="" />
-            </div>
-            <div class="form-group">
-              <label for="textarea">How Can We Help You?</label>
-              <textarea
-                name="textarea"
-                id="textarea"
-                rows="10"
-                cols="50"
-                required="">
-              </textarea>
-            </div>
-            <button class="form-submit-btn" type="submit">Submit</button>
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            id="form">
+            <!-- Replace with your Access Key -->
+            <input
+              type="hidden"
+              name="access_key"
+              value="e4333142-6257-4a2f-86c4-a19138feae2a" />
+            <!-- d09bbdca-783b-4ce7-9f5f-fa2a3b76248e -->
+            <!-- Form Inputs. Each input must have a name="" attribute -->
+            <label for="name">Name</label>
+            <input type="text" name="name" required />
+            <br /><label for="">Phone No </label>
+            <input type="tel" name="phone no" />
+            <br /><label for="">E-mail</label>
+            <input type="email" name="email" required /><br />
+            <label for="">How may i help you?</label>
+            <textarea
+              name="message"
+              placeholder="Leave Your Message here.."
+              required></textarea
+            ><br />
+            <!-- <input type="file" /> -->
+            <!-- Honeypot Spam Protection -->
+            <input
+              type="checkbox"
+              name="botcheck"
+              class="hidden"
+              style="display: none" />
+
+            <!-- Custom Confirmation / Success Page -->
+            <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+            <br /><br />
+            <button type="submit">Submit Form</button>
           </form>
         </div>
       </div>
