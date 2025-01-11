@@ -1,7 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
 }
 body {
   font-family: "Times New Roman", Times, serif;
@@ -49,7 +49,28 @@ header,
   }
 }
 /* social media trooper */
-.sm {
+.sm2 {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .watsapp,
+  .instagram,
+  .youtube,
+  .facebook {
+    .Btn {
+      height: 40px;
+      width: 40px;
+    }
+    .svgContainer {
+      width: auto;
+      border: none;
+    }
+  }
+}
+.sm,
+.sm2 {
   display: flex;
   justify-content: centerc;
   align-items: center;
@@ -57,7 +78,6 @@ header,
   z-index: 1;
 }
 .watsapp {
-  /* From Uiverse.io by Gaurang7717 */
   .Btn {
     width: 30px;
     height: 30px;
@@ -67,7 +87,6 @@ header,
     border: none;
     background-color: transparent;
     position: relative;
-    /* overflow: hidden; */
     border-radius: 7px;
     cursor: pointer;
     transition: all 0.3s;
@@ -113,7 +132,6 @@ header,
   }
 }
 .instagram {
-  /* From Uiverse.io by vinodjangid07 */
   .Btn {
     width: 30px;
     height: 30px;
@@ -123,7 +141,6 @@ header,
     border: none;
     background-color: transparent;
     position: relative;
-    /* overflow: hidden; */
     border-radius: 7px;
     cursor: pointer;
     transition: all 0.3s;
@@ -190,7 +207,6 @@ header,
   }
 }
 .youtube {
-  /* From Uiverse.io by vinodjangid07 */
   .Btn {
     width: 30px;
     height: 30px;
@@ -200,7 +216,6 @@ header,
     border: none;
     background-color: transparent;
     position: relative;
-    /* overflow: hidden; */
     border-radius: 7px;
     cursor: pointer;
     transition: all 0.3s;
@@ -245,7 +260,6 @@ header,
 }
 .facebook {
   padding-right: 20px;
-  /* From Uiverse.io by vinodjangid07 */
   .Btn {
     width: 30px;
     height: 30px;
@@ -255,7 +269,6 @@ header,
     border: none;
     background-color: transparent;
     position: relative;
-    /* overflow: hidden; */
     border-radius: 7px;
     cursor: pointer;
     transition: all 0.3s;
@@ -303,9 +316,8 @@ header,
 .menu-line {
   display: flex;
   align-items: center;
-  /* background-color: red; */
   height: auto;
-  padding: 10px;
+  /* padding: 10px; */
   justify-content: space-between;
   .logo {
     font-size: 5vh;
@@ -321,17 +333,18 @@ header,
     font-size: 2.8vh;
     color: white;
     align-items: center;
+    a {
+      text-decoration: none;
+      color: white;
+    }
   }
-
   /* button */
-  /* From Uiverse.io by MuhammadHasann */
   button {
     justify-self: center;
     position: relative;
     padding: 5px 15px;
     background: orange;
     font-size: 17px;
-    /* font-weight: 500; */
     color: #181818;
     border: 3px solid #fec195;
     border-radius: 8px;
@@ -505,7 +518,6 @@ header,
         var(--c);
     background-attachment: fixed;
     position: absolute;
-    /* background-color: white; */
     top: 1.5%;
     width: 88%;
     right: 0;
@@ -515,136 +527,45 @@ header,
     display: none;
     padding: 10px;
     .inside-burger-data {
-      ul {
-        list-style: none;
-      }
-
-      .example-2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .example-2 .icon-content {
-        margin: 0 10px;
-        position: relative;
-      }
-      .example-2 .icon-content .tooltip {
-        position: absolute;
-        top: -30px;
-        left: 50%;
-        transform: translateX(-50%);
-        color: #fff;
-        padding: 6px 10px;
-        border-radius: 5px;
-        opacity: 0;
-        visibility: hidden;
-        font-size: 14px;
-        transition: all 0.3s ease;
-      }
-      .example-2 .icon-content:hover .tooltip {
-        opacity: 1;
-        visibility: visible;
-        top: -50px;
-      }
-      .example-2 .icon-content a {
-        position: relative;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        color: #4d4d4d;
-        background-color: #fff;
-        transition: all 0.3s ease-in-out;
-      }
-      .example-2 .icon-content a:hover {
-        box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
-      }
-      .example-2 .icon-content a svg {
-        position: relative;
-        z-index: 1;
-        width: 30px;
-        height: 30px;
-      }
-      .example-2 .icon-content a:hover {
-        color: white;
-      }
-      .example-2 .icon-content a .filled {
-        position: absolute;
-        top: auto;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 0;
-        background-color: #000;
-        transition: all 0.3s ease-in-out;
-      }
-      .example-2 .icon-content a:hover .filled {
-        height: 100%;
-      }
-
-      .example-2 .icon-content a[data-social="whatsapp"] .filled,
-      .example-2 .icon-content a[data-social="whatsapp"] ~ .tooltip {
-        background-color: #128c7e;
-      }
-
-      .example-2 .icon-content a[data-social="facebook"] .filled,
-      .example-2 .icon-content a[data-social="facebook"] ~ .tooltip {
-        background-color: #3b5998;
-      }
-      .example-2 .icon-content a[data-social="instagram"] .filled,
-      .example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
-        background: linear-gradient(
-          45deg,
-          #405de6,
-          #5b51db,
-          #b33ab4,
-          #c135b4,
-          #e1306c,
-          #fd1f1f
-        );
-      }
-      .example-2 .icon-content a[data-social="youtube"] .filled,
-      .example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
-        background-color: #ff0000;
-      }
       #options {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         gap: 10px;
         span {
           padding: 10px;
           background-color: rgb(167, 167, 167);
           text-align: center;
-          transition: all 0.6s ease-in;
+          transition: all 0.2s ease-in;
           font-size: 1.3rem;
           color: white;
           font-weight: 500;
           letter-spacing: 1px;
           border-radius: 8px;
-          border: 1px solid orange;
+          /* border: 1px solid orange; */
+          width: 70%;
+          a {
+            text-decoration: none;
+            color: white;
+          }
         }
         span:hover {
           background-color: rgb(56, 56, 56);
+          border: 1px solid white;
         }
       }
     }
   }
 }
-
 /* menu item end */
-
 /* main  part */
-
 .cont {
   /* height: 100px; */
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: start;
-  padding-top: 30px;
   height: 80vh;
   .left-cont,
   .right-cont {
@@ -670,7 +591,6 @@ header,
     color: whitesmoke;
     text-decoration-color: orange;
   }
-  /* From Uiverse.io by Carlos-vargs */
   .button {
     display: flex;
     justify-content: center;
@@ -708,7 +628,6 @@ header,
     height: 130px;
     width: 130px;
     border-radius: 50%;
-    /* background-position: center; */
     background-size: cover;
     transition: all 0.7s ease;
   }
@@ -773,7 +692,6 @@ header,
   border-bottom-left-radius: 1rem; /* Rounded bottom corners */
   border-bottom-right-radius: 1rem; /* Rounded bottom corners */
 }
-
 /* Right border styles */
 .right-border {
   position: absolute;
@@ -781,13 +699,11 @@ header,
   right: -8px; /* Positioning */
   border-radius: 0.375rem; /* Rounded corners */
 }
-
 /* Top right border */
 .right-border.top {
   top: 56px; /* Positioning */
   height: 28px; /* Height of the top right border */
 }
-
 /* iphone end */
 /* after main part image part */
 .top-image-container {
@@ -808,7 +724,6 @@ header,
 /* span div part start */
 .span-division {
   padding-bottom: 20px;
-  /* gap: 20px; */
   width: 100%;
   justify-content: space-evenly;
   display: flex;
@@ -974,6 +889,7 @@ header,
     overflow: hidden;
     position: relative;
     width: 100%;
+    scroll-behavior: auto;
   }
 
   .card {
@@ -1112,7 +1028,7 @@ header,
     width: 98%;
     margin: 0 auto;
     padding-bottom: 50px;
-    height: 80vh;
+    height: auto;
   }
   .card-container-new {
     display: flex;
@@ -1120,6 +1036,7 @@ header,
     overflow: hidden;
     position: relative;
     width: 100%;
+    scroll-behavior: auto;
   }
   .card-new {
     flex: 0 0 400px;
@@ -1310,6 +1227,9 @@ footer {
       display: flex;
       font-size: 2.3em;
       padding-right: 20px;
+      gap: 40px;
+      justify-content: center;
+      align-items: center;
     }
   }
   .cont {
@@ -1344,7 +1264,7 @@ footer {
       width: 100%;
     }
     .form-container {
-      width: 100%;
+      width: 95%;
     }
   }
 }
