@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>organic-store-Everything</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header style="overflow: hidden">
+      <div class="nav-cont">
+        <div class="logo-option-box">
+          <div class="logo">
+            <a href="index.html"
+              ><img src="img&more/organic-logo.svg" height="70px" alt="Logo"
+            /></a>
+          </div>
+          <div class="option">
+            <a href="Everything.html"><span>Everything</span></a>
+            <a href="Groceries.html"><span>Groceries</span></a>
+            <span style="color: rgb(112, 187, 0)">Juice</span>
+          </div>
+        </div>
+        <div class="cart-option-box">
+          <div class="option">
+            <a href="About.html"><span>About</span></a>
+            <a href="Contact.html"><span>Contact</span></a>
+          </div>
+          <div class="cart">
+            <div class="count">
+              <p id="count-cart">30</p>
+            </div>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+          <div class="cust-id">
+            <a href=""><i class="fa-solid fa-user"></i></a>
+          </div>
+          <div class="ham-menu-bar" onclick="showMenuBar()">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </div>
+      <div class="list-menu-bar">
+        <div class="content-menu-bar">
+          <span class="xMark" onclick="hiddenMenuBar()"
+            ><i class="fa-solid fa-xmark"></i>
+          </span>
+          <div class="res-list-bar" style="padding-top: 100px">
+            <div class="menu-list">
+              <a href=""><i class="fa-solid fa-user"></i></a>
+              <a href="">Everything</a>
+              <a href="">Groceries</a>
+              <a href="">Juice</a>
+              <a href=""> About </a>
+              <a href=""> Contact </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main></main>
+    <footer>
+      <div class="footer-container">
+        <div class="f-container-01">
+          <img
+            src="img&more/organic-store-white-logo.png"
+            height="80px"
+            alt="" />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit velit
+            neque harum quaerat sapiente possimus illo, dignissimos animi,
+            ducimus ipsum architecto adipisci tempore praesentium perspiciatis
+            nesciunt inventore ad, totam consequatur.
+          </p>
+        </div>
+        <div
+          class="f-container-02"
+          style="
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+          ">
+          <div class="child-1 child-box">
+            <h1>Quick Links</h1>
+            <br />
+            <span>About</span>
+            <a href="#"><span>Cart</span></a>
+            <span>Checkout</span>
+            <span>Home</span>
+            <span>My Account</span>
+            <span>Shop</span>
+            <span>Contact</span><br /><br />
+            <h1>Site Links</h1>
+            <br />
+            <span>Privacy Policy</span>
+            <span>Shipping Details</span>
+            <span>Offer Coupens</span>
+            <span>Term and Conditions</span><br />
+          </div>
+          <div class="child-2 child-box">
+            <h1>Download Our Mobile App</h1>
+            <br />
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae
+              architecto reprehenderit iste accusantium eveniet id non ut
+              tempora similique fugiat molestias ea.
+            </p>
+            <br /><br />
+            <h1>Quick Links</h1>
+            <br />
+            <span>Know More About Us</span>
+            <span>Visit Store</span>
+            <span>Let's connect</span>
+            <span>Locate Store</span><br /><br />
+            <img src="img&more/play-store.png" alt="" /><br />
+            <img src="img&more/app-store.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div
+        class="f2-container"
+        style="
+          justify-content: space-around;
+          flex-wrap: wrap;
+          color: rgba(255, 255, 255, 0.67);
+        ">
+        <p style="font-size: 1.5em; padding: 10px">
+          CopyRight <i class="fa-regular fa-copyright"></i>
+          <span id="date">date</span> | Organic Store
+        </p>
+        <div
+          class="social-media"
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            gap: 10px;
+            font-size: 1.2em;
+          ">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-github"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+      </div>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
