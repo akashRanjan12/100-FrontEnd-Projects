@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AkashRanjan</title>
+    <link rel="stylesheet" href="folio.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="container-1">
+          <div class="container-of-span">
+            <a id="hov" href=""><span>CV</span></a>
+            <a id="hov" href="folio.html#work"><span>Projects</span></a>
+            <a id="hov" href="folio.html#Contacts"><span>Contacts</span></a>
+            <a id="hov" href="folio.html#goskill"> <span>Skills</span></a>
+          </div>
+          <div class="line-menu">
+            <label class="popup">
+              <input type="checkbox" />
+              <div class="burger" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <nav class="popup-window">
+                <a id="opt" href=""> <span>CV</span></a>
+                <a id="opt" href="folio.html#work"> <span>My Projects</span></a>
+                <a id="opt" href="folio.html#Contacts">
+                  <span>Contacts</span></a
+                >
+                <a id="opt" href="folio.html#goskill"> <span>Skills</span></a>
+              </nav>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="toggeling">
+        <label class="toggle" for="switch">
+          <input id="switch" class="input" type="checkbox" />
+          <div class="icon icon--moon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              viewBox="0 0 512 512"
+              id="moon">
+              <g>
+                <path
+                  fill="#6A6D68"
+                  d="M412.95,381.15c-8.05,10.119-16.94,19.33-26.55,27.54c-2.271,1.939-4.58,3.819-6.92,5.64   c-0.261,0.21-0.521,0.42-0.78,0.63c-0.09,0.07-0.19,0.13-0.28,0.2c-5.979,4.6-12.2,8.83-18.64,12.689   c-1.92,1.15-3.851,2.28-5.811,3.37c-18.14,10.061-37.819,17.221-58.42,21.16c-12.27,2.34-24.87,3.55-37.66,3.55   c-27.92,0-54.94-5.739-80.32-17.04c-7.74-3.46-15.3-7.43-22.47-11.81c-6.96-4.24-13.77-9-20.24-14.14   c-5.28-4.19-10.3-8.62-15.07-13.25c-1.3-1.261-2.57-2.54-3.82-3.83c-30.43-31.21-49.57-71.37-54.6-115.38   c-4.54-39.75,2.83-79.04,20.95-113.75c4.99-9.561,10.81-18.78,17.41-27.561c0.2-0.26,0.4-0.529,0.6-0.79   c0.9-1.18,1.81-2.359,2.74-3.529c37.77-47.521,94.29-74.78,155.07-74.78c45.101,0,87.641,14.87,123.021,42.99   c1.54,1.22,2.89,2.33,4.14,3.39c3.16,2.64,6.29,5.43,9.51,8.5c0.49,0.47,0.99,0.94,1.471,1.43c1.3,1.25,2.58,2.54,3.84,3.83   c32.41,33.351,51.979,77.011,55.31,123.75C458.97,293.51,443.88,342.23,412.95,381.15z"
+                  opacity=".9"></path>
+                <path
+                  fill="#A3AAA0"
+                  d="M408.95,377.15c-8.05,10.119-16.94,19.33-26.55,27.54c-2.271,1.939-4.58,3.819-6.92,5.64   c-0.261,0.21-0.521,0.42-0.78,0.63c-0.09,0.07-0.19,0.13-0.28,0.2c-5.979,4.6-12.2,8.83-18.64,12.689   c-1.92,1.15-3.851,2.28-5.811,3.37c-19.76,10.96-41.359,18.471-63.979,22.141c-10.51,1.699-21.23,2.569-32.101,2.569   c-27.92,0-54.94-5.739-80.32-17.04c-7.74-3.46-15.3-7.43-22.47-11.81c-6.96-4.24-13.77-9-20.24-14.14   c-5.21-4.141-10.17-8.511-14.89-13.08c-0.06-0.051-0.12-0.11-0.18-0.17c-32.64-31.721-53.18-73.381-58.42-119.21   c-4.54-39.75,2.83-79.04,20.95-113.75c4.99-9.561,10.81-18.78,17.41-27.561c1.09-1.449,2.2-2.89,3.34-4.319   c0.55-0.69,1.1-1.37,1.65-2.051c37.76-46.25,93.52-72.729,153.42-72.729c45.101,0,87.641,14.87,123.021,42.99   c1.54,1.22,2.89,2.33,4.14,3.39c3.16,2.64,6.29,5.43,9.51,8.5c1.811,1.72,3.58,3.48,5.311,5.26c0.05,0.061,0.11,0.11,0.16,0.17   c32.319,33.33,51.83,76.92,55.149,123.58C454.97,289.51,439.88,338.23,408.95,377.15z"></path>
+                <circle
+                  cx="285"
+                  cy="156"
+                  r="44.5"
+                  fill="#666865"
+                  stroke="#5E5E5D"
+                  stroke-miterlimit="10"
+                  stroke-width="4"></circle>
+                <circle
+                  cx="385"
+                  cy="300"
+                  r="21.5"
+                  fill="#666865"
+                  stroke="#5E5E5D"
+                  stroke-miterlimit="10"
+                  stroke-width="4"></circle>
+                <circle
+                  cx="166"
+                  cy="296.5"
+                  r="27.84"
+                  fill="#666865"
+                  stroke="#5E5E5D"
+                  stroke-miterlimit="10"
+                  stroke-width="4"></circle>
+                <circle
+                  cx="261.25"
+                  cy="272.75"
+                  r="14.75"
+                  fill="#666865"
+                  stroke="#5E5E5D"
+                  stroke-miterlimit="10"
+                  stroke-width="4"></circle>
+                <circle
+                  cx="151.5"
+                  cy="184"
+                  r="28"
+                  fill="#666865"
+                  stroke="#5E5E5D"
+                  stroke-miterlimit="10"
+                  stroke-width="4"></circle>
+                <circle
+                  cx="297.5"
+                  cy="382.501"
+                  r="27.5"
+                  fill="#666865"
+                  stroke="#5E5E5D"
+                  stroke-miterlimit="10"
+                  stroke-width="4"></circle>
+                <circle
+                  cx="395"
+                  cy="213"
+                  r="18.5"
+                  fill="#666865"
+                  stroke="#5E5E5D"
+                  stroke-miterlimit="10"
+                  stroke-width="4"></circle>
+                <circle
+                  cx="317"
+                  cy="216"
+                  r="8"
+                  fill="#666865"
+                  stroke="#5E5E5D"
+                  stroke-miterlimit="10"
+                  stroke-width="4"></circle>
+                <path
+                  fill="#666865"
+                  stroke="#5E5E5D"
+                  stroke-miterlimit="10"
+                  stroke-width="4"
+                  d="M299.55,450.38   c-12.27,2.34-24.87,3.55-37.66,3.55c-27.92,0-54.94-5.739-80.32-17.04c-7.74-3.46-15.3-7.43-22.47-11.81   c-6.96-4.24-13.77-9-20.24-14.14c-5.28-4.19-10.3-8.62-15.07-13.25c-1.3-1.261-2.57-2.54-3.82-3.83   c-0.06-0.051-0.12-0.11-0.18-0.17c-32.64-31.721-53.18-73.381-58.42-119.21c-4.54-39.75,2.83-79.04,20.95-113.75   c4.99-9.561,10.81-18.78,17.41-27.561c1.09-1.449,2.2-2.89,3.34-4.319c0.55-0.69,1.1-1.37,1.65-2.051   c-0.16,3.011-0.29,6.2-0.39,9.58c-2.39,79.15,12.97,253.43,185.661,310.98C293.12,448.41,296.31,449.42,299.55,450.38z"
+                  opacity=".2"></path>
+              </g>
+            </svg>
+          </div>
+
+          <div class="w-8 icon icon--sun">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 47.5 47.5"
+              id="sun">
+              <defs>
+                <clipPath id="a">
+                  <path d="M0 38h38V0H0v38Z"></path>
+                </clipPath>
+              </defs>
+              <g
+                fill="#ffac33"
+                clip-path="url(#a)"
+                transform="matrix(1.25 0 0 -1.25 0 47.5)">
+                <path
+                  d="M17 35s0 2 2 2 2-2 2-2v-2s0-2-2-2-2 2-2 2v2zM35 21s2 0 2-2-2-2-2-2h-2s-2 0-2 2 2 2 2 2h2zM5 21s2 0 2-2-2-2-2-2H3s-2 0-2 2 2 2 2 2h2zM10.121 29.706s1.414-1.414 0-2.828-2.828 0-2.828 0l-1.415 1.414s-1.414 1.414 0 2.829c1.415 1.414 2.829 0 2.829 0l1.414-1.415ZM31.121 8.707s1.414-1.414 0-2.828-2.828 0-2.828 0l-1.414 1.414s-1.414 1.414 0 2.828 2.828 0 2.828 0l1.414-1.414ZM30.708 26.879s-1.414-1.414-2.828 0 0 2.828 0 2.828l1.414 1.414s1.414 1.414 2.828 0 0-2.828 0-2.828l-1.414-1.414ZM9.708 5.879s-1.414-1.414-2.828 0 0 2.828 0 2.828l1.414 1.414s1.414 1.414 2.828 0 0-2.828 0-2.828L9.708 5.879ZM17 5s0 2 2 2 2-2 2-2V3s0-2-2-2-2 2-2 2v2zM29 19c0 5.523-4.478 10-10 10-5.523 0-10-4.477-10-10 0-5.522 4.477-10 10-10 5.522 0 10 4.478 10 10"></path>
+              </g>
+            </svg>
+          </div>
+        </label>
+      </div>
+    </header>
+    <main>
+      <persional-detail>
+        <div class="info-container">
+          <div class="container-2">
+            <div class="right data">
+              <div class="data-msg">
+                <div class="animate-msg">
+                  <div id="changingText">I am a Devloper</div>
+                </div>
+                <div class="animate-para">
+                  <p id="detail-1">
+                    It's impossible to move, to live, to operate at any level
+                    without leaving traces, bits, seemingly meaningless
+                    fragments of personal information.
+                  </p>
+                </div>
+              </div>
+              <div class="social-media">
+                <div class="animate-social">
+                  <div class="social-buttons">
+                    <a href="#" class="social-button github">
+                      <svg
+                        class="cf-icon-svg"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="-2.5 0 19 19">
+                        <path
+                          d="M9.464 17.178a4.506 4.506 0 0 1-2.013.317 4.29 4.29 0 0 1-2.007-.317.746.746 0 0 1-.277-.587c0-.22-.008-.798-.012-1.567-2.564.557-3.105-1.236-3.105-1.236a2.44 2.44 0 0 0-1.024-1.348c-.836-.572.063-.56.063-.56a1.937 1.937 0 0 1 1.412.95 1.962 1.962 0 0 0 2.682.765 1.971 1.971 0 0 1 .586-1.233c-2.046-.232-4.198-1.023-4.198-4.554a3.566 3.566 0 0 1 .948-2.474 3.313 3.313 0 0 1 .091-2.438s.773-.248 2.534.945a8.727 8.727 0 0 1 4.615 0c1.76-1.193 2.532-.945 2.532-.945a3.31 3.31 0 0 1 .092 2.438 3.562 3.562 0 0 1 .947 2.474c0 3.54-2.155 4.32-4.208 4.548a2.195 2.195 0 0 1 .625 1.706c0 1.232-.011 2.227-.011 2.529a.694.694 0 0 1-.272.587z"></path>
+                      </svg>
+                    </a>
+                    <a href="#" class="social-button linkedin">
+                      <svg
+                        viewBox="0 -2 44 44"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Icons" stroke="none" stroke-width="1">
+                          <g transform="translate(-702.000000, -265.000000)">
+                            <path
+                              d="M746,305 L736.2754,305 L736.2754,290.9384 C736.2754,287.257796 734.754233,284.74515 731.409219,284.74515 C728.850659,284.74515 727.427799,286.440738 726.765522,288.074854 C726.517168,288.661395 726.555974,289.478453 726.555974,290.295511 L726.555974,305 L716.921919,305 C716.921919,305 717.046096,280.091247 716.921919,277.827047 L726.555974,277.827047 L726.555974,282.091631 C727.125118,280.226996 730.203669,277.565794 735.116416,277.565794 C741.21143,277.565794 746,281.474355 746,289.890824 L746,305 L746,305 Z M707.17921,274.428187 L707.117121,274.428187 C704.0127,274.428187 702,272.350964 702,269.717936 C702,267.033681 704.072201,265 707.238711,265 C710.402634,265 712.348071,267.028559 712.41016,269.710252 C712.41016,272.34328 710.402634,274.428187 707.17921,274.428187 L707.17921,274.428187 L707.17921,274.428187 Z M703.109831,277.827047 L711.685795,277.827047 L711.685795,305 L703.109831,305 L703.109831,277.827047 L703.109831,277.827047 Z"
+                              id="LinkedIn"></path>
+                          </g>
+                        </g>
+                      </svg>
+                    </a>
+                    <a href="#" class="social-button facebook">
+                      <svg
+                        version="1.1"
+                        id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 310 310"
+                        xml:space="preserve">
+                        <g id="XMLID_834_">
+                          <path
+                            id="XMLID_835_"
+                            d="M81.703,165.106h33.981V305c0,2.762,2.238,5,5,5h57.616c2.762,0,5-2.238,5-5V165.765h39.064
+                      c2.54,0,4.677-1.906,4.967-4.429l5.933-51.502c0.163-1.417-0.286-2.836-1.234-3.899c-0.949-1.064-2.307-1.673-3.732-1.673h-44.996
+                      V71.978c0-9.732,5.24-14.667,15.576-14.667c1.473,0,29.42,0,29.42,0c2.762,0,5-2.239,5-5V5.037c0-2.762-2.238-5-5-5h-40.545
+                      C187.467,0.023,186.832,0,185.896,0c-7.035,0-31.488,1.381-50.804,19.151c-21.402,19.692-18.427,43.27-17.716,47.358v37.752H81.703
+                      c-2.762,0-5,2.238-5,5v50.844C76.703,162.867,78.941,165.106,81.703,165.106z"></path>
+                        </g>
+                      </svg>
+                    </a>
+                    <a href="#" class="social-button instagram">
+                      <svg
+                        width="800px"
+                        height="800px"
+                        viewBox="0 0 20 20"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Page-1" stroke="none" stroke-width="1">
+                          <g
+                            id="Dribbble-Light-Preview"
+                            transform="translate(-340.000000, -7439.000000)">
+                            <g
+                              id="icons"
+                              transform="translate(56.000000, 160.000000)">
+                              <path
+                                d="M289.869652,7279.12273 C288.241769,7279.19618 286.830805,7279.5942 285.691486,7280.72871 C284.548187,7281.86918 284.155147,7283.28558 284.081514,7284.89653 C284.035742,7285.90201 283.768077,7293.49818 284.544207,7295.49028 C285.067597,7296.83422 286.098457,7297.86749 287.454694,7298.39256 C288.087538,7298.63872 288.809936,7298.80547 289.869652,7298.85411 C298.730467,7299.25511 302.015089,7299.03674 303.400182,7295.49028 C303.645956,7294.859 303.815113,7294.1374 303.86188,7293.08031 C304.26686,7284.19677 303.796207,7282.27117 302.251908,7280.72871 C301.027016,7279.50685 299.5862,7278.67508 289.869652,7279.12273 M289.951245,7297.06748 C288.981083,7297.0238 288.454707,7296.86201 288.103459,7296.72603 C287.219865,7296.3826 286.556174,7295.72155 286.214876,7294.84312 C285.623823,7293.32944 285.819846,7286.14023 285.872583,7284.97693 C285.924325,7283.83745 286.155174,7282.79624 286.959165,7281.99226 C287.954203,7280.99968 289.239792,7280.51332 297.993144,7280.90837 C299.135448,7280.95998 300.179243,7281.19026 300.985224,7281.99226 C301.980262,7282.98483 302.473801,7284.28014 302.071806,7292.99991 C302.028024,7293.96767 301.865833,7294.49274 301.729513,7294.84312 C300.829003,7297.15085 298.757333,7297.47145 289.951245,7297.06748 M298.089663,7283.68956 C298.089663,7284.34665 298.623998,7284.88065 299.283709,7284.88065 C299.943419,7284.88065 300.47875,7284.34665 300.47875,7283.68956 C300.47875,7283.03248 299.943419,7282.49847 299.283709,7282.49847 C298.623998,7282.49847 298.089663,7283.03248 298.089663,7283.68956 M288.862673,7288.98792 C288.862673,7291.80286 291.150266,7294.08479 293.972194,7294.08479 C296.794123,7294.08479 299.081716,7291.80286 299.081716,7288.98792 C299.081716,7286.17298 296.794123,7283.89205 293.972194,7283.89205 C291.150266,7283.89205 288.862673,7286.17298 288.862673,7288.98792 M290.655732,7288.98792 C290.655732,7287.16159 292.140329,7285.67967 293.972194,7285.67967 C295.80406,7285.67967 297.288657,7287.16159 297.288657,7288.98792 C297.288657,7290.81525 295.80406,7292.29716 293.972194,7292.29716 C292.140329,7292.29716 290.655732,7290.81525 290.655732,7288.98792"
+                                id="instagram-[#167]"></path>
+                            </g>
+                          </g>
+                        </g>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="image-container">
+              <div class="img1-container-animate">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 300 300"
+                  class="background-svg">
+                  <defs>
+                    <linearGradient
+                      id="gradient"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%">
+                      <stop
+                        offset="0%"
+                        style="stop-color: #8e2de2; stop-opacity: 1" />
+                      <stop
+                        offset="100%"
+                        style="stop-color: #4a00e0; stop-opacity: 1" />
+                    </linearGradient>
+                  </defs>
+                  <circle cx="150" cy="150" r="150" fill="url(#gradient)" />
+                </svg>
+                <div class="image"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="" name="work"></a>
+      </persional-detail>
+      <work>
+        <div class="container-of-work">
+          <div class="border-of-work-1">
+            <div class="heading-work"><h1>My Work (Projects) :</h1></div>
+            <div class="parent-box-01">
+              <div class="child-box box-1">
+                <div class="child-inside-box box-01">
+                  <div class="image-of-box">
+                    <a href="proj-page.html#box-01"
+                      ><div class="proj-images image-01"></div
+                    ></a>
+                  </div>
+                  <div class="detail">
+                    <h3>Standard Calculator</h3>
+                    <p>
+                      In this project, my aim to build standard calculator. this
+                      projects primary interface comprises a container...
+                    </p>
+                    <p style="text-align: right">
+                      <a href="">Project Detail</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="child-inside-box box-02">
+                  <div class="image-of-box">
+                    <a href=""><div class="proj-images image-02"></div></a>
+                  </div>
+                  <div class="detail">
+                    <h3>Unit Converter</h3>
+                    <p>
+                      In this project, my aim to build Unit converter. this
+                      projects contain ever type of converter like Currency,
+                      time, weight...
+                    </p>
+                    <p style="text-align: right">
+                      <a href="">Project Detail</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="child-box box-2">
+                <div class="child-inside-box box-01">
+                  <div class="image-of-box">
+                    <a href=""><div class="proj-images image-03"></div></a>
+                  </div>
+                  <div class="detail">
+                    <h3>Tik-Tak_toe Game</h3>
+                    <p>
+                      Here in this project, i build a game where i use lot of js
+                      in it. Where i set a heading and a container and in end
+                      a...
+                    </p>
+                    <p style="text-align: right">
+                      <a href="">Project Detail</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="child-inside-box box-02">
+                  <div class="image-of-box">
+                    <a href=""><div class="proj-images image-04"></div></a>
+                  </div>
+                  <div class="detail">
+                    <h3>Standard Calculator</h3>
+                    <p>
+                      In this project, i added animation on scroll time by
+                      mouseScroll and wgte i use multiple content and added
+                      scroll time animation...
+                    </p>
+                    <p style="text-align: right">
+                      <a href="">Project Detail</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="child-box box-3">
+                <div class="child-inside-box box-01">
+                  <div class="image-of-box">
+                    <a href=""><div class="proj-images image-05"></div></a>
+                  </div>
+                  <div class="detail">
+                    <h3>Question Bank</h3>
+                    <p>
+                      In this project, I create a question Bank of TMBHU of BCA
+                      vocational course only Where i use only Html...
+                    </p>
+                    <p style="text-align: right">
+                      <a href="">Project Detail</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="child-inside-box box-02">
+                  <div class="image-of-box">
+                    <a href=""><div class="proj-images image-06"></div></a>
+                  </div>
+                  <div class="detail">
+                    <h3>SWeet shop</h3>
+                    <p>
+                      In this project, It only uses Html and create a sweet shop
+                      where i use iframes and divided into multiple blocks...
+                    </p>
+                    <p style="text-align: right">
+                      <a href="">Project Detail</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="child-box box-4">
+                <div class="child-inside-box box-01">
+                  <div class="image-of-box">
+                    <a href=""><div class="proj-images image-07"></div></a>
+                  </div>
+                  <div class="detail">
+                    <h3>MOuseEvent Animation</h3>
+                    <p>
+                      In this project, i crate a element in js and append with
+                      body element and set time interval on mouse effect...
+                    </p>
+                    <p style="text-align: right">
+                      <a href="">Project Detail</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="child-inside-box box-02">
+                  <div class="image-of-box">
+                    <a href=""><div class="proj-images image-08"></div></a>
+                  </div>
+                  <div class="detail">
+                    <h3>Amazon Clone</h3>
+                    <p>
+                      Here i design a frontend of Amazon clone where i use
+                      html,css and js only.where, I put my efforts and learn lot
+                      of techni...
+                    </p>
+                    <p style="text-align: right">
+                      <a href="">Project Detail</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="" name="goskill"></a>
+      </work>
+      <skills>
+        <div class="skills-container">
+          <div class="heading-work" style="padding-top: 20px">
+            <h1>What I know :</h1>
+          </div>
+          <div class="whole-skill-container">
+            <div class="container-01-skill">
+              <div class="skills-section frontend">
+                <div
+                  class="heading-work"
+                  style="padding-bottom: 15px; color: white">
+                  Frontend
+                </div>
+                <div class="container-list">
+                  <span id="skill-lang-list" style="color: orange">Html</span>
+                  <span id="skill-lang-list" style="color: red">Css</span>
+                  <span id="skill-lang-list" style="color: yellow">JS</span>
+                  <span id="skill-lang-list" style="color: cyan">React JS</span
+                  ><span id="skill-lang-list" style="color: skyblue"
+                    >Flutter</span
+                  >
+                </div>
+              </div>
+              <div class="skills-section backend">
+                <div
+                  class="heading-work"
+                  style="padding-bottom: 15px; color: white">
+                  Backend
+                </div>
+                <div class="container-list">
+                  <span
+                    id="skill-lang-list"
+                    style="color: black; font-weight: 550"
+                    >php</span
+                  >
+                  <span id="skill-lang-list" style="color: orange">Java</span>
+                  <span id="skill-lang-list" style="color: yellow">JS</span>
+                  <span id="skill-lang-list" style="color: yellowgreen"
+                    >Python</span
+                  >
+                  <span id="skill-lang-list" style="color: cyan">Dart</span>
+                </div>
+              </div>
+              <div class="skills-section devops">
+                <div
+                  class="heading-work"
+                  style="padding-bottom: 15px; color: white">
+                  DataBase
+                </div>
+                <div class="container-list">
+                  <span id="skill-lang-list" style="color: orange">My SQL</span>
+                  <span
+                    id="skill-lang-list"
+                    style="color: slateblue; font-weight: 550; width: 110px"
+                    >Postgre SQL</span
+                  >
+                  <span id="skill-lang-list" style="color: orangered"
+                    >Oracle</span
+                  >
+                  <span
+                    id="skill-lang-list"
+                    style="color: green; font-weight: 550"
+                    >MongoDB</span
+                  >
+                  <span id="skill-lang-list" style="color: yellow"
+                    >Firebase</span
+                  >
+                  <span id="skill-lang-list" style="color: red">Redis</span>
+                </div>
+              </div>
+              <div class="container-card">
+                <div class="card-more-work">
+                  <div class="header">
+                    <div class="top">
+                      <div class="circle">
+                        <span class="red circle2"></span>
+                      </div>
+                      <div class="circle">
+                        <span class="yellow circle2"></span>
+                      </div>
+                      <div class="circle">
+                        <span class="green circle2"></span>
+                      </div>
+                      <div class="title">
+                        <p id="title2">More Projects</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container-of-work-section">
+                    <div class="proj-list">
+                      <div class="proj-1">
+                        <button class="more-pro">
+                          <span>My first project fdfdsfsdf f of bussiness</span>
+                          <svg
+                            width="38"
+                            height="38"
+                            viewBox="0 0 74 74"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+                              fill="white"></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="proj-2">
+                        <button class="more-pro">
+                          <span>My first project of bussiness</span>
+                          <svg
+                            width="38"
+                            height="38"
+                            viewBox="0 0 74 74"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+                              fill="white"></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="proj-3">
+                        <button class="more-pro">
+                          <span>My first project of bussiness</span>
+                          <svg
+                            width="38"
+                            height="38"
+                            viewBox="0 0 74 74"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+                              fill="white"></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="proj-4">
+                        <button class="more-pro">
+                          <span>My first project of bussiness</span>
+                          <svg
+                            width="38"
+                            height="38"
+                            viewBox="0 0 74 74"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+                              fill="white"></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="proj-5"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </skills>
+      <a href="" name="Contacts"></a>
+      <contact-me>
+        <div class="background-animation">
+          <div class="header-work" style="padding-bottom: 40px">
+            <div class="waviy">
+              <span style="--i: 1">C</span>
+              <span style="--i: 2">o</span>
+              <span style="--i: 3">n</span>
+              <span style="--i: 4">t</span>
+              <span style="--i: 5">a</span>
+              <span style="--i: 6">c</span>
+              <span style="--i: 7">t</span>
+              <span style="--i: 8"> </span>
+              <span style="--i: 9">M</span>
+              <span style="--i: 10">e</span>
+            </div>
+          </div>
+          <div class="contact-container">
+            <!-- input clint detail box -->
+            <div class="client-detail-box">
+              <form
+                name="myform"
+                class="submission"
+                onsubmit="return(validate(event))"
+                style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  flex-direction: column;
+                  gap: 20px;
+                  padding-bottom: 40px;
+                ">
+                <input
+                  placeholder="Name"
+                  name="name"
+                  class="input-style"
+                  type="text"
+                  required />
+                <input
+                  placeholder="E-mail"
+                  name="email"
+                  class="input-style"
+                  type="email"
+                  required />
+                <input
+                  placeholder="Phone No:          --optional--"
+                  name="num"
+                  class="input-style"
+                  type="text" />
+                <textarea
+                  required
+                  placeholder="Enter message here.."
+                  id="textarea"
+                  name="areatext"
+                  class="input-style"
+                  style="
+                    height: 80px;
+                    font-family: 'Times New Roman', Times, serif;
+                  "></textarea>
+                <input type="submit" id="btn01" />
+                <div class="errorbox"></div>
+              </form>
+            </div>
+          </div>
+          <div class="msg-box">
+            <i class="fa-solid fa-xmark cross-msg-box" onclick="msg()"></i>
+            <div id="loadingMessage" style="height: 80%; width: 100%">
+              <div id="msg">
+                <div id="loader">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+            </div>
+            <div id="successMessage" style="height: 80%; width: 100%">
+              <div id="msg">
+                <div class="card">
+                  <div class="text">
+                    <svg
+                      class="tick"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 130.2 130.2">
+                      <circle
+                        class="path circle"
+                        fill="none"
+                        stroke="#73AF55"
+                        stroke-width="6"
+                        stroke-miterlimit="10"
+                        cx="65.1"
+                        cy="65.1"
+                        r="62.1" />
+                      <polyline
+                        class="path check"
+                        fill="none"
+                        stroke="#73AF55"
+                        stroke-width="6"
+                        stroke-linecap="round"
+                        stroke-miterlimit="10"
+                        points="100.2,40.2 51.5,88.8 29.8,67.5 " />
+                    </svg>
+                    <span class="success">MESSAGE SENT SUCCESSFULLY</span>
+                  </div>
+                  <div class="icons"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </contact-me>
+    </main>
+    <footer>
+      <a href="#"
+        ><div class="back-to-top-option">
+          <p>Back to Top</p>
+        </div></a
+      >
+    </footer>
+    <script src="folio.js"></script>
+  </body>
+</html>
