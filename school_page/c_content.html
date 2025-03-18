@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>c programing language</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0px;
+        background-repeat: no-repeat;
+    }
+
+
+    table,
+    th,
+    td {
+        padding: 5px;
+    }
+
+    tr:nth-child(1) {
+        background: #ffe7e7;
+    }
+
+    td:nth-child(odd) {
+        background: #f7ffe9;
+    }
+
+    td:nth-child(even) {
+        background: #fff3ea;
+    }
+
+    .code-card {
+        background-color: black;
+        color: #fff;
+        border-radius: 8px;
+        overflow: scroll;
+
+    }
+</style>
+
+<body>
+    <header>
+        <div class="log_in">
+            <a href="index.html">
+                <button id="button_home">
+                    <h2 style="padding: 0.6em">HOME</h2>
+                </button></a>
+            <h2 id="logo_login">
+                <font size="9em">&#579;</font> EDUCATION
+            </h2>
+
+
+            <script src="https://cdn.lordicon.com/lordicon.js"></script>
+
+            <lord-icon src="https://cdn.lordicon.com/rmkahxvq.json" trigger="in" delay="1500" state="in-arrow-down"
+                style="width:50px;height:50px" id="menu">
+            </lord-icon>
+            <a href=""><lord-icon id="faq" src="https://cdn.lordicon.com/ojnjgkun.json" trigger="hover">
+                </lord-icon></a>
+
+        </div>
+
+    </header>
+
+
+
+    <main class="c-main main_of_10th">
+
+
+        <div class="left-side" id="side">
+            <div class="button-container">
+                <div class="button-list">
+                    <a class="btn-c" onclick="btnn()" href="#intro">What is c </a>
+                    <a class="btn-c" onclick="btnn()" href="#history-c">History of c </a>
+                    <a class="btn-c" onclick="btnn()" href="#why-c">Why use c</a>
+                    <a class="btn-c" onclick="btnn()" href="#features-c">Features of c </a>
+                    <a class="btn-c" onclick="btnn()" href="#install-c">How to Install</a>
+                    <a class="btn-c" onclick="btnn()" href="#first-c-program">Write the First Program</a>
+                    <a class="btn-c" onclick="btnn()" href="#variable-c">Variable in C </a>
+                    <a class="btn-c" onclick="btnn()" href="#data-type">Data Type in C </a>
+                    <a class="btn-c" onclick="btnn()" href="#keywords-c">Keywords in c</a>
+                    <a class="btn-c" onclick="btnn()" href="#opeartor-c">Operators</a>
+                    <a class="btn-c" onclick="btnn()" href="#comment-c">Comments</a>
+                    <a class="btn-c" onclick="btnn()" href="#format-specifier">Format Specifier</a>
+                    <a class="btn-c" onclick="btnn()" href="#Escape-Sequence">Escape Sequence</a>
+                    <a class="btn-c" onclick="btnn()" href="#ascii">ASCII Value</a>
+                    <a class="btn-c" onclick="btnn()" href="#constants">Constant in C </a>
+                    <a class="btn-c" onclick="btnn()" href="#Literals">Literals in C </a>
+                </div>
+            </div>
+        </div>
+        <div class="center">
+
+            <div class="into-c article" id="intro">
+
+
+                <h2 class="h2-c-clor">What is c programing language</h2>
+                <p>C programming language is a widely-used, general-purpose programming language originally developed by
+                    Dennis Ritchie in the early 1970s at Bell Labs. It's known for its simplicity, efficiency, and
+                    powerful capabilities. C has been influential in shaping many other programming languages and
+                    remains one of the most popular languages today, particularly in system programming, embedded
+                    systems, and operating system development.</p>
+                <p>C is considered a middle-level language, meaning it combines the features of high-level languages
+                    (like Python or Java) with the efficiency of low-level languages (like assembly). It allows
+                    programmers to write code that directly interacts with the hardware of a computer, making it
+                    suitable for tasks where performance and control are critical.</p>
+
+                <h2 class="h2-c-clor">Multiple software and games are make with the help of c programing language</h2>
+                <span> There are give below :-</span>
+
+                <ol>
+
+                    <li>Operating Systems:</li>
+                    <ul>
+                        <li>
+                            <p><strong>Unix/Linux Kernel:</strong>The Unix operating system and its derivatives,
+                                including Linux, are largely written in C. The core components of these operating
+                                systems, such as the kernel, device drivers, and system utilities, are implemented in C.
+                            </p>
+                        </li>
+                    </ul>
+
+                    <li>System Software:</li>
+                    <ul>
+                        <li>
+                            <p><strong>GNU Compiler Collection (GCC): </strong>GCC, a popular compiler collection used
+                                for compiling various programming languages, including C, C++, and Fortran, is written
+                                primarily in C.</p>
+                        </li>
+
+                        <li>
+                            <p><strong>Microsoft Windows Kernel: </strong>While Windows incorporates components written
+                                in several languages, a significant portion of its core, including the kernel, device
+                                drivers, and system libraries, is implemented in C.</p>
+                        </li>
+                    </ul>
+
+                    <li>Databases:</li>
+                    <ul>
+                        <li>
+                            <p><strong>MySQL</strong>MySQL, an open-source relational database management system, is
+                                written in C and C++.</p>
+                        </li>
+                        <li>
+                            <p><strong>SQLite: </strong>SQLite, a lightweight, embedded SQL database engine, is written
+                                entirely in C.</p>
+                        </li>
+                    </ul>
+
+                    <li>Games</li>
+                    <ul>
+                        <li>
+                            <p><strong>Doom</strong>: The classic first-person shooter game Doom, released in 1993, was
+                                primarily developed in C. It's known for its revolutionary graphics and gameplay</p>
+                        </li>
+
+                        <li>
+                            <p><strong>Quake:</strong>Another iconic first-person shooter game, Quake, released in 1996,
+                                was developed in C. It introduced advanced 3D graphics and multiplayer capabilities.</p>
+                        </li>
+
+                        <li>
+                            <p><strong>Angry Birds: </strong> The original version of Angry Birds, a popular mobile
+                                game, was developed using C for the game engine and C++ for additional components</p>
+                        </li>
+
+                    </ul>
+
+
+                    <li>Embedded Systems:</li>
+                    <ul>
+                        <li>
+                            <p><strong>Embedded Linux Systems</strong>Many embedded systems, including routers, IoT
+                                devices, and automotive systems, use C for developing firmware and device drivers due to
+                                its efficiency and close-to-hardware capabilities.</p>
+                        </li>
+
+                        <li>
+                            <p><strong>Microcontroller Programming</strong>C is widely used for programming
+                                microcontrollers in embedded systems for applications such as robotics, home automation,
+                                and industrial control.</p>
+                        </li>
+                    </ul>
+
+                    <li>Graphics and Multimedia:</li>
+                    <ul>
+                        <li>
+                            <p><strong>OpenGL: </strong>OpenGL, a cross-platform graphics API, is implemented in C and
+                                provides functions for rendering 2D and 3D graphics.</p>
+                        </li>
+
+                        <li>
+                            <p><strong>FFmpeg</strong>FFmpeg, a multimedia framework used for handling audio, video, and
+                                other multimedia data, is written in C.</p>
+                        </li>
+
+                    </ul>
+                </ol>
+            </div><br>
+            <hr><br>
+
+            <div class="history-c article" id="history-c">
+                <h2 class="h2-c-clor">A Journey Through Time: The History of C Programming Language</h2>
+                <p>The history of C programming language is intertwined with the development of the <strong>Unix
+                        operating system</strong> . In the early 1970s at Bell Labs, Dennis Ritchie began crafting C,
+                    building upon the foundation laid by an earlier language called <strong>B</strong> , created by Ken
+                    Thompson</p>
+
+                <p>Here's a glimpse into C's historical timeline:</p>
+
+                <ol>
+                    <li>
+                        <p><strong>1972 : </strong>The birth of C! Ritchie develops C to address limitations faced with
+                            B and write utilities for the budding Unix. Notably, C was used to re-implement the Unix
+                            kernel itself, solidifying its role in the Unix ecosystem.</p>
+                    </li>
+
+                    <li>
+                        <p><strong>1978 : </strong>A landmark year for C. The book <strong> "The C Programming
+                                Language"</strong> by Brian Kernighan and Dennis Ritchie is published. This book, often
+                            referred to as "K&R," served as the de facto standard for C for many years and continues to
+                            be a valuable learning resource for programmers today.</p>
+                    </li>
+
+                    <li>
+                        <p><strong>1980s : </strong>C's popularity surges. Its efficiency, portability, and ability to
+                            interact directly with hardware make it a favorite for developing various software,
+                            including application programs, device drivers, and embedded systems.</p>
+                    </li>
+
+                    <li>
+                        <p><strong>1989 : </strong>The <b> ANSI C</b> standard is established, defining a formal
+                            specification for the C language. This standardization ensures consistency and
+                            interoperability across different C compiler implementations.</p>
+                    </li>
+                </ol>
+
+                <p> <strong>Present Day: </strong>C remains a <b>highly influential language</b> . While newer languages
+                    might dominate application development, C's legacy endures in various domains:</p>
+
+                <ul>
+                    <li>
+                        <p><strong>Operating Systems : </strong>C is a cornerstone for operating systems like Linux,
+                            macOS (partially), and early versions of Windows.</p>
+                    </li>
+                    <li>
+                        <p><strong>Embedded Systems: </strong>C's efficiency and low-level access make it well-suited
+                            for resource-constrained embedded systems like microcontrollers.</p>
+                    </li>
+                    <li>
+                        <p><strong>Systems Programming: </strong>C is often the go-to choice for developing system-level
+                            software like device drivers, network protocols, and compilers due to its fine-grained
+                            control and performance advantages.</p>
+                    </li>
+                </ul>
+            </div><br>
+            <hr><br>
+
+            <div class="q-c article" id="why-c">
+                <h2 class="h2-c-clor">Why use the c programing language </h2>
+                <p>C programming language is used because it's fast, powerful, and flexible. It allows programmers to
+                    control computer hardware directly, making it great for creating efficient software like operating
+                    systems and device drivers. C programs can run on many different types of computers without needing
+                    major changes, which makes them portable. Its simple syntax and large community make it easy to
+                    learn and get help. Many important software and games, like operating systems and Doom, are made
+                    using C. Overall, C is a popular choice for tasks where performance, control, and portability are
+                    important, making it essential in fields like system programming, embedded systems, and game
+                    development.</p>
+
+                <ul>
+                    <li>
+                        <p><strong>Efficiency and Performance: </strong> C is known for its efficient code and fast
+                            execution speed. This is because C code is compiled directly into machine code, which can be
+                            directly run by the computer's processor. This makes C a good choice for applications where
+                            performance is critical, such as embedded systems, operating systems, and game development.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p><strong>Low-Level Access: </strong> C provides low-level access to hardware and memory, which
+                            allows programmers to have more control over how their programs interact with the system.
+                            This can be useful for system programming tasks, such as writing device drivers and kernel
+                            components.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p><strong>Portability: </strong>C code is relatively portable across different platforms with
+                            minimal modifications. This is because C compilers are available for a wide range of
+                            operating systems and hardware architectures.</p>
+                    </li>
+
+                    <li>
+                        <p><strong>Foundation for Other Languages:</strong>C is considered the foundation for many other
+                            popular programming languages, such as C++ and Java. Understanding C can be beneficial for
+                            learning these other languages, as they share many similarities with C.</p>
+                    </li>
+
+                    <li>
+                        <p><strong>Large Community and Resources: </strong>C has a large and active community of
+                            developers, which means there are many resources available online and in libraries to help
+                            you learn and use the language.</p>
+                    </li>
+                </ul>
+            </div><br>
+            <hr><br>
+
+            <div class="features-c article" id="features-c">
+                <h2 class="h2-c-clor">Features of c language </h2>
+                <ul>
+                    <li>
+                        <p><strong>Simple and Efficient: </strong>C has a relatively <b> small set of keywords </b>and a
+                            clean syntax, making it easier to learn compared to some other languages. Additionally, C
+                            programs are known for their <b> speed and efficiency </b>due to their low-level nature.</p>
+                    </li>
+
+                    <li>
+                        <p><strong>Procedural: </strong>C programs are organized into <b>functions </b>(also called
+                            procedures), which are reusable blocks of code that perform specific tasks. This promotes
+                            modularity and code organization.</p>
+                    </li>
+
+                    <li>
+                        <p><strong>General-purpose</strong>C is a <b> versatile language </b>that can be used to develop
+                            a wide variety of software applications, from system programming like operating systems to
+                            games and embedded systems.</p>
+                    </li>
+
+                    <li>
+                        <p><strong>Statically Typed: </strong>C requires you to declare the data type of variables
+                            before using them. This helps to prevent errors and makes code more predictable during
+                            compilation.</p>
+                    </li>
+
+                    <li>
+                        <p><strong>Rich Set of Operators: </strong>C provides a rich set of operators for performing
+                            various operations on data, including arithmetic, relational, logical, and bitwise
+                            operations.</p>
+                    </li>
+
+
+                    <li>
+                        <p><strong>Libraries with Rich Functions: </strong>C comes with a standard library that offers a
+                            collection of pre-written functions for common tasks like input/output, string manipulation,
+                            and mathematical calculations</p>
+                    </li>
+
+                    <li>
+                        <p><strong>Pointers: </strong>C allows you to work directly with memory addresses using
+                            pointers. This provides fine-grained control over memory management but can be complex to
+                            learn and use safely</p>
+                    </li>
+
+                    <li>
+                        <p><strong>Recursion: </strong>C supports recursion, where a function can call itself. This can
+                            be a powerful technique for solving problems but requires careful attention to avoid
+                            infinite loops.</p>
+                    </li>
+
+                    <li>
+                        <p><strong>Portability: </strong>C code can be easily <b>compiled and run on different platforms
+                            </b>with minimal modifications due to its standardized nature.</p>
+                    </li>
+
+                    <li>
+                        <p><strong>Extensible: </strong>C allows you to <b>create your own libraries and functions</b>
+                            to extend its capabilities and build upon existing code</p>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="install-c  article" id="install-c">
+                <h2 class="h2-c-clor">
+                    How to install the Vscode
+                </h2>
+                <ol>
+                    <li><strong>Download & install</strong></li>
+                    <ul>
+                        <li>
+                            <p>Visit the official VS Code download page: https://code.visualstudio.com/download</p>
+                        </li>
+                        <li>
+                            <p>Choose the appropriate installer for your operating system (Windows, macOS, or Linux).
+                            </p>
+                        </li>
+                        <li>
+                            <p>Run the downloaded installer and follow the on-screen instructions.</p>
+                        </li>
+                    </ul>
+
+                    <li><strong>Install the C/C++ Extension:</strong></li>
+
+                    <ul>
+                        <li>
+                            <p>Open thye VsCode</p>
+                        </li>
+                        <li>
+                            <p>Click on the Extensions icon (usually looks like a cube) in the Activity bar on the left
+                                side.</p>
+                        </li>
+                        <li>
+                            <p>Search for "C/C++" in the search bar.</p>
+                        </li>
+                        <li>
+                            <p>Click on the "C/C++" extension by Microsoft and install it.</p>
+                        </li>
+                    </ul>
+
+                    <li><strong>Verify Installation (Optional):</strong></li>
+
+                    <ul>
+                        <li>
+                            <p>Create a new file by clicking on<span> "File" -> "New File" </span>or using the keyboard
+                                shortcut Ctrl+N (Windows/Linux) or Cmd+N (macOS).</p>
+                        </li>
+                        <li>
+                            <p>Save the file with a <span>.c</span> extension <span>(e.g., helloworld.c)</span> .</p>
+                        </li>
+                        <li>
+                            <p>Go to the <span>"Terminal"</span> tab (usually located at the bottom of the VS Code
+                                window).</p>
+                        </li>
+                        <li>
+                            <p>Click on the "+" button and select <span>"Run Build Task"</span> or <span>"Run Task"
+                                </span> depending on your VS Code version.</p>
+                        </li>
+                    </ul>
+
+                </ol>
+                <div class="code-card">
+                    <div class="box-code">
+                        <pre>
+                        #include < stdio.h >
+                        int main(){
+                            printf("Hello World!");
+                            return 0;
+                        }
+                        
+                    </pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="first-c-program article" id="first-c-program">
+                <h2 class="h2-c-clor">Write the first program in c</h2>
+                <ul>
+                    <li>
+                        <p>Open a text editor like Notepad (Windows), TextEdit (macOS), or any code editor of your
+                            choice.</p>
+                    </li>
+                    <li>
+                        <p>Write the following C code:</p>
+                    </li>
+
+                </ul>
+                <div class="code-card">
+                    <div class="box-code">
+                        <pre>
+                        #include < stdio.h >
+                        int main(){
+                            printf("Hello World!");
+                            return 0;
+                        }
+                        
+                    </pre>
+                    </div>
+                </div>
+
+                <ol>
+                    <li><strong>save the File </strong></li>
+                    <ul>
+                        <li>
+                            <p>• Save the file with a .c extension, for example, hello.c.</p>
+                        </li>
+                    </ul>
+                    <li><strong>Compile the program</strong></li>
+                    <ul>
+                        <li>
+                            <p>• Open a terminal or command prompt.</p>
+                        </li>
+                        <li>
+                            <p>• Navigate to the directory where you saved <span>hello.c</span> . </p>
+                        </li>
+                        <li>
+                            <p>• Run the following command to compile the program:</p>
+                        </li>
+
+                        <li>
+                            <p><span>gcc hello.c -o hello
+                                </span></p>
+                            <p> This command tells the gcc compiler to compile hello.c and produce an executable named
+                                hello.</p>
+
+                        </li>
+
+                        <li><strong>Run the Program:</strong></li>
+                        <ul>
+                            <li>
+                                <p>• After successful compilation, you'll find an executable file named hello (or
+                                    hello.exe on Windows) in the same directory.</p>
+                            </li>
+                            <li>
+                                <p>• Run the executable by typing its name and pressing Enter: </p>
+                            </li>
+                            <h3><span>./hello</span></h3>
+                            <p>• On Windows, you can simply type hello and press Enter.</p>
+                        </ul>
+
+                        <ul>
+                            <li><strong>Output</strong></li>
+                            <li>
+                                <p>• On Windows, you can simply type hello and press Enter.</p>
+                            </li>
+                            <h3><b>beducation</b></h3>
+                        </ul>
+                    </ul>
+                </ol>
+            </div>
+
+            <div class="variable-c article" id="variable-c">
+                <h2 class="h2-c-clor">Variable in C</h2>
+                <p>In C programming, a variable acts like a <b>named storage location </b>in your computer's memory. It
+                    allows you to store and manipulate data during program execution. Here's a breakdown of what
+                    variables are and how they work</p>
+
+                <ol start="1">
+                    <li><strong>Purpose</strong></li>
+                    <ul>
+                        <li>
+                            <p>• Variables hold data of different types, such as numbers (integers, floats), characters,
+                                or even pointers (memory addresses).</p>
+                        </li>
+                        <li>
+                            <p>• You can give them meaningful names that reflect their purpose in your code, making it
+                                easier to understand.</p>
+                        </li>
+                        <li>
+                            <p>• By using variables, you can avoid hardcoding values throughout your program, leading to
+                                more flexible and reusable code.</p>
+                        </li>
+                    </ul>
+
+                    <li><strong>Declaration of Variable</strong></li>
+                    <ul>
+                        <li>
+                            <p>• Before using a variable, you need to declare it. This tells the compiler the variable's
+                                name, data type, and allocates the necessary memory space.</p>
+                        </li>
+                        <li>
+                            <p>• Here's the basic syntax for declaring a variable:</p>
+                        </li>
+                        <li>
+                            <p><b>data_type variable_name;</b>
+                            <p>
+                        </li>
+
+                        <li>
+                            <p>• <strong>data_type:</strong> This specifies the kind of data the variable can hold
+                                (e.g.,<b>int</b> for integers,<b> float </b>for floating-point numbers, <b>char </b>for
+                                characters).</p>
+                        </li>
+                        <li>
+                            <p>•<strong>variable_name : </strong>You choose a name that follows C's naming conventions
+                                (letters, numbers, and underscores, starting with a letter).</p>
+                        </li>
+                        <li>Example :- </li>
+
+                        <code style="color: gray;">
+                        <p>int age;  // Declares an integer variable named 'age'</p>
+                        <p>float pi = 3.14159;  // Declares a float variable named 'pi' with an initial value</p>
+                        <p>char initial = 'A';  // Declares a character variable named 'initial' with an initial value</p>
+                    </code>
+
+                    </ul>
+
+                    <li><strong>Scope:</strong></li>
+                    <ul>
+                        <li>
+                            <p>• The lifetime and accessibility of a variable depend on its scope.</p>
+                        </li>
+                        <li>
+                            <p>• Variables declared within a function are local to that function and cannot be accessed
+                                from outside</p>
+                        </li>
+                        <li>
+                            <p>• Variables declared globally (outside any function) have wider scope and can be accessed
+                                throughout the program, but their use should be limited to avoid naming conflicts</p>
+                        </li>
+                    </ul>
+                </ol>
+                <li>Here are the key rules for variable declaration in C:></li>
+                <ul>
+                    <h3><strong>Data Type :</strong></h3>
+                    <p>You must explicitly declare the data type of a variable before using it. This tells the compiler
+                        the kind of data the variable can hold and how much memory to allocate for it. Common data types
+                        include:</p>
+                    <li>
+                        <p><span style="color: gray;">int:</span> Integer (whole numbers)</p>
+                        <p><span style="color: gray;">float:</span>Floating-point numbers (numbers with decimals)</p>
+                        <p><span style="color: gray;">char:</span>Single character</p>
+                        <p><span style="color: gray;">double:</span> Double-precision floating-point number (more
+                            precise than float)</p>
+                    </li>
+                    <h3><strong>Variable Name:</strong></h3>
+                    <li>
+                        <p>• Choose a name that is meaningful and reflects the variable's purpose. This improves code
+                            readability.</p>
+                    </li>
+                    <li>
+                        <p>• Names can consist of letters, numbers, and underscores, but they must start with a letter.
+                        </p>
+                    </li>
+                    <li>
+                        <p>• Keywords and reserved words used in C cannot be used as variable names (e.g., int, float,
+                            if, else).</p>
+                    </li>
+                </ul>
+
+
+                <div class="data-type" id="data-type">
+                    <h2 class="h2-c-clor">Data Type in c</h2>
+                    <p>In C programming, a data type is a classification that specifies which type of value a variable
+                        can
+                        hold, what operations can be performed on that value, and how the value is stored in memory.
+                        Data
+                        types in C are used to define variables, functions, and expressions. Each data type has specific
+                        characteristics such as size, range of values, and operations that can be performed on it.</p>
+
+                    <div class="images"> <img src="./images/data type.jpg" alt="data types" srcset=""
+                            style="width:100%;">
+                    </div>
+
+                    <h2 class="h2-c-clor">Integer Data Type :</h2><br>
+                    <div class="d-content">
+                        <p>In C++, basic data types, also called primitive data types or fundamental data types, are the
+                            building blocks for storing different kinds of data in your programs. These types are
+                            predefined
+                            by the language and provide a way to represent basic values.</p>
+                    </div><br>
+
+                    <table>
+                        <tr>
+                            <th>Types</th>
+                            <th>Data Types</th>
+                        </tr>
+                        <tr>
+                            <td>Basic Datat Types</td>
+                            <td>int , float , char , Bolean</td>
+                        </tr>
+                    </table><br>
+
+                    <h2><strong>Integer Data Types are given below :</strong></h2><br>
+
+                    <table>
+                        <tr>
+                            <th>Data Types</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>int</td>
+                            <td>It is Represents the integer numbers.<br><b>ex : 35, 56,34 etc.</b></td>
+                        </tr>
+                        <tr>
+                            <td>short</td>
+                            <td>It is Represents short integer numbers.<br><b>ex : short a = 12345;</b></td>
+                        </tr>
+                        <tr>
+                            <td>long</td>
+                            <td>Represents very long integer numbers<b>ex : long a = 9223372036854775807 ;</b></td>
+                        </tr>
+                        <tr>
+                            <td>unsigned int</td>
+                            <td>Represents unsigned integer numbers (non-negative values only). <b></b></td>
+                        </tr>
+                    </table><br>
+
+                    <p><strong>float data types are given below :</strong></p><br>
+
+                    <table>
+                        <tr>
+                            <th>Data Type </th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>float</td>
+                            <td>: Represents single-precision floating-point numbers.<br><b>ex: 4.5 , 23.6 , 45.04
+                                    etc.</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>double</td>
+                            <td> Represents double-precision floating-point numbers.</td>
+                        </tr>
+                        <tr>
+                            <td>long</td>
+                            <td> Represents extended-precision floating-point numbers.</td>
+                        </tr>
+                    </table><br>
+
+                    <p><strong>character data type:</strong></p><br>
+                    <table>
+                        <tr>
+                            <th>Data Type</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>char</td>
+                            <td>Represents a single character.</td>
+                        </tr>
+                        <tr>
+                            <td>wchar_t</td>
+                            <td> Represents a wide character.</td>
+                        </tr>
+                        <tr>
+                            <td>char16_t</td>
+                            <td> Represents a UTF-16 character.</td>
+                        </tr>
+                        <tr>
+                            <td>char32_t</td>
+                            <td> Represents a UTF-32 character.</td>
+                        </tr>
+                    </table><br>
+                    <p><strong>Boolean Data Types are given below :</strong></p><br>
+                    <table>
+                        <tr>
+                            <th>Data Types</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>bool</td>
+                            <td> Represents boolean values, true or false.</td>
+                        </tr>
+                    </table><br>
+
+                    <h2 class="h2-c-clor">Derived Data Types</h2>
+
+                    <p>
+                        In C programming, a derived data type is a type that is derived from the fundamental data types
+                        offered by the language. These fundamental data types include int, char, float, double, etc.
+                        Derived
+                        data types are created using the fundamental data types, other derived data types, or a
+                        combination
+                        of both. Some examples of derived data types in C include:</p><br>
+
+                    <ul>
+                        <div>
+                            <li> <b>Array :- </b>
+                                <p>Array are collections of elements of the same data type. They are derived from
+                                    fundamental data types and can store multiple values of that type in contiguous
+                                    memory
+                                    locations.</p>
+                            </li>
+
+                            <div class="code-card">
+                                <div class="box-code">
+                                    <pre>
+                                    int myArray[5]; // Array of integers
+                                    
+                                </pre>
+                                </div>
+                            </div>
+                        </div>
+
+                </div><br>
+
+                <div>
+                    <li><b> Pointer :- </b>
+                        <p>
+                            Pointer are variables that store memory addresses of other variables. They are derived from
+                            fundamental data types and are extensively used in C for dynamic memory allocation and
+                            manipulation
+                        </p>
+                    </li>
+                    <div class="code-card">
+                        <div class="box-code">
+                            <pre>
+                                    int *ptr; // Pointer to an integer
+                                </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <li><b>Function :- </b>
+                        <p>
+                            In C programming, a function is a self-contained block of code that performs a specific
+                            task.
+                            Functions are fundamental building blocks in C programming as they allow you to break down
+                            your
+                            program into smaller, more manageable pieces, making it easier to understand, debug, and
+                            maintain. Here's the basic structure of a function in C:</p>
+                    </li>
+
+                    <div class="code-card">
+                        <div class="box-code">
+                            <pre>
+                                    return_type function_name(parameter_list) {
+                                        // Function body
+                                        // Statements
+                                        // Return statement (optional)
+                                    }
+                                </pre>
+                        </div>
+                    </div>
+
+                </div>
+                </ul><br>
+
+                <h2 class="h2-c-clor">User Defined Data Types :</h2><br>
+                <p>
+                    In C programming, user-defined data types allow programmers to create their own data types based on
+                    existing primitive data types such as int, float, char, etc. These user-defined data types can
+                    simplify
+                    code, improve readability, and enhance program organization. There are several ways to define
+                    user-defined data types in C, including structures, typedef, and enumerations.</p><br>
+
+                <ul>
+                    <div>
+                        <li>
+                            <b>Structure : -</b>
+                            <p> Structures allow you to group together variables of different data types under a single
+                                name. They are derived from fundamental data types and can be used to create complex
+                                data
+                                structures.</p>
+                        </li>
+                        <div class="code-card">
+                            <div class="box-code">
+                                <pre>
+                                    struct Point {
+                                        int x;
+                                        int y;
+                                    };
+                                    
+                                    struct Point p1; // Structure variable
+                                </pre>
+                            </div>
+                        </div>
+                    </div><br>
+
+                    <div>
+                        <li><b>Union :- </b>
+                            <p>Unions allow you to define a data type that can hold different types of data members, but
+                                only one member can contain a value at any given time. It is derived from fundamental
+                                data
+                                types and is useful in situations where memory efficiency is crucial.</p>
+                        </li>
+                    </div>
+                    <div class="code-card">
+                        <div class="box-code">
+                            <pre>
+                                    union Data {
+                                        int i;
+                                        float f;
+                                    };
+                                    
+                                    union Data d;
+                                </pre>
+                        </div>
+                    </div><br>
+
+                    <div>
+                        <li><b>Enumerations (enums) :- </b> Enumerations are user-defined data types that consist of
+                            named
+                            constants, which are essentially a list of related integer values. They are derived from the
+                            integer data type and provide a way to define symbolic names for integer constants.</li>
+                        <div class="code-card">
+                            <div class="box-code">
+                                <pre>
+                                        enum Color {
+                                            RED,
+                                            GREEN,
+                                            BLUE
+                                        };
+                                        
+                                        enum Color c;
+                                    </pre>
+                            </div>
+                        </div>
+                </ul><br>
+
+                <p><strong>Let's see the basic data types. It size is given according to 32 bit OS.</strong></p><br>
+
+                <table>
+                    <tr>
+                        <th>Data Type</th>
+                        <th>Size of Memory</th>
+                        <th>Range</th>
+                    </tr>
+                    <tr>
+                        <td>char</td>
+                        <td>1 byte</td>
+                        <td>-128 to 127</td>
+                    </tr>
+                    <tr>
+                        <td>singed char</td>
+                        <td>1 byte</td>
+                        <td>-128 to 127</td>
+                    </tr>
+                    <tr>
+                        <td>unsinged char</td>
+                        <td>1 byte</td>
+                        <td>0 to 127</td>
+                    </tr>
+                    <tr>
+                        <td>shot</td>
+                        <td>2 byte</td>
+                        <td>-32,768 to 32,767</td>
+                    </tr>
+                    <tr>
+                        <td>signed short</td>
+                        <td>2 byte</td>
+                        <td>-32,768 to 32,767</td>
+                    </tr>
+                    <tr>
+                        <td>unsigned short</td>
+                        <td>2 byte</td>
+                        <td>0 to 32,767</td>
+                    </tr>
+
+                    <tr>
+                        <td>int</td>
+                        <td>2 byte</td>
+                        <td>-32,768 to 32,767</td>
+                    </tr>
+                    <tr>
+                        <td>signed int</td>
+                        <td>2 byte</td>
+                        <td>-32,768 to 32,767</td>
+                    </tr>
+                    <tr>
+                        <td>unsigned int</td>
+                        <td>2 byte</td>
+                        <td>0 to 32,767</td>
+                    </tr>
+                    <tr>
+                        <td>short int</td>
+                        <td>2 byte</td>
+                        <td>-32,768 to 32,767</td>
+                    </tr>
+                    <tr>
+                        <td>signed short int</td>
+                        <td>2 byte</td>
+                        <td>-32,768 to 32,767</td>
+                    </tr>
+                    <tr>
+                        <td>unsigned short int</td>
+                        <td>2 byte</td>
+                        <td>0 to 32,767</td>
+                    </tr>
+                    <tr>
+                        <td>long int</td>
+                        <td>4 byte</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>signed long int</td>
+                        <td>4 byte</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>unsigned long int</td>
+                        <td>4 byte</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>float</td>
+                        <td>4 byte</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>double</td>
+                        <td>8 byte</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>long double</td>
+                        <td>10 byte</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div><br><hr>
+
+
+            <div class="keywords-c" id="keywords-c">
+                <h2 class="h2-c-clor">Keywords in C </h2><br>
+                <p>
+                    In C programming, keywords are reserved words that have predefined meanings and are part of the
+                    language syntax. These keywords cannot be used as identifiers (such as variable names, function
+                    names, etc.) because they are already reserved for specific purposes within the language.
+                </p><br>
+                <p><b>Note: </b>There are 32 keyword in c language : </p><br>
+                <p>They are given below :- </p>
+
+                <table>
+                    <tr>
+                        <td>auto</td>
+                        <td>double</td>
+                        <td>int </td>
+                        <td>struct</td>
+                    </tr>
+                    <tr>
+                        <td>break</td>
+                        <td>else</td>
+                        <td>long</td>
+                        <td>swithc</td>
+                    </tr>
+                    <tr>
+                        <td>case</td>
+                        <td>enum</td>
+                        <td>registre</td>
+                        <td>typedef</td>
+                    </tr>
+                    <tr>
+                        <td>char</td>
+                        <td>return</td>
+                        <td>extern</td>
+                        <td>union</td>
+                    </tr>
+                    <tr>
+                        <td>const</td>
+                        <td>float</td>
+                        <td>short</td>
+                        <td>unsinged</td>
+                    </tr>
+                    <tr>
+                        <td>continue</td>
+                        <td>for</td>
+                        <td>signed</td>
+                        <td>void</td>
+                    </tr>
+                    <tr>
+                        <td>default</td>
+                        <td>goto</td>
+                        <td>sizeof</td>
+                        <td>volatile</td>
+                    </tr>
+                    <tr>
+                        <td>do</td>
+                        <td>if</td>
+                        <td>static</td>
+                        <td>while</td>
+                    </tr>
+                </table><br>
+                <p>These keywords serve various purposes in the C language, such as defining control flow (e.g., if,
+                    else, switch, while), declaring data types (e.g., int, float, char), defining storage classes (e.g.,
+                    auto, static, register), and specifying other language constructs (e.g., return, break, continue).
+                    It's important to note that these keywords are case-sensitive, meaning that they must be written
+                    exactly as shown above to be recognized by the compiler. Additionally, C99 introduced a few
+                    additional keywords, such as _Bool, _Complex, and _Imaginary.</p>
+
+            </div><br><hr>
+
+            <div class="opeartor-c" id="opeartor-c">
+                <h2 class="h2-c-clor">Opeators in C </h2><br>
+                <div>
+                    <p>
+                        In C programming, an operator is a symbol that represents a specific operation to be performed
+                        on one or more operands. Operators are fundamental to performing various computations and
+                        manipulations in C code. Here are some common types of operators in C</p>
+                </div>
+
+                <div>
+                    <ul>
+                        <li> <b>Arithmetic Operators: </b>
+                            <p>Used to perform arithmetic operations such as addition, subtraction, multiplication,
+                                division, and modulus.</p>
+
+                        <li>`+` (Addition) </li>
+                        <li>`-` (Subtraction)</li>
+                        <li>`*` (Multiplaction)</li>
+                        <li>`/` (Division)</li>
+                        <li>`%` (Modulus)</li>
+                        </li><br>
+
+                        <li> <b>Assignment Operators: </b>
+                            <p>Assignment Operators Used to assign values to variables.
+                            </p>
+
+                        <li>`=` (Assignment) </li>
+                        <li>`+=` (Addition Assignment)</li>
+                        <li>`-=`(Subtraction Assignment)</li>
+                        <li>`*=` (Multiplaction Assignment)</li>
+                        <li>`/=` (Division Assignment)</li>
+                        <li>`%=` (Modulus Assignment)</li>
+                        </li>
+
+                        <br>
+
+
+                        <li> <b>Comparison Operators: </b>
+                            <p>Comparison Operators Used to compare two values.
+                            </p>
+
+                        <li>`==` (Equal to) </li>
+                        <li>`!=` (Not Equal to)</li>
+                        <li>`<`(Greaterthan)< /li>
+                        <li>`>` (Lessthan)</li>
+                        <li>`<=` (Greaterthan equal to)</li>
+                        <li>`>=` (Less than equal to)</li>
+                        </li> <br>
+
+
+                        <li> <b>Logical Operators: </b>
+                            <p>Logical Operators Used to perform logical operations.</p>
+
+                        <li>`&&` (Logical AND) </li>
+                        <li>`||` (Logical OR)</li>
+                        <li>`!`(Logical NOT)</li>
+
+                        </li><br>
+
+
+                        <li> <b>Bitwise Operators: </b>
+                            <p>Bitwise Operators Used to perform logical operations.</p>
+                            <div>
+                        <li>`&` (Bitwise AND) </li>
+                        <li>`|` (Bitwise OR)</li>
+                        <li>`^`(Bitwise XOR)</li>
+                        <li>`~`(Bitwise NOT)</li>
+                        <li>`<<`(Left shift)</li>
+                        <li>`>>`(Right shift)</li>
+                        </li><br>
+
+                        <li> <b>Unary Operators: </b>
+                            <p>Unary Operators that operate on a single operand.</p>
+                            <div>
+                        <li>`+` (Unary Add) </li>
+                        <li>`-` (Unary Subtract)</li>
+                        <li>`++`(Increment)</li>
+                        <li>`--`(Decrement)</li>
+                        </li>
+
+
+                        <li> <b>Ternary Operators: </b>
+                            <p>Ternary Operators Conditional operator ? : used for decision making</p>
+
+                        <li>condition ? expression1 : expression2 </li>
+
+                        </li><br>
+
+                        <li> <b>Miscellaneous Operators: </b>
+
+                        <li>sizeof (Returns the size of a variable or data type) </li>
+                        <li>& (Address-of operator)</li>
+                        <li>* (Pointer dereference operator)</li>
+                        </li>
+                        </li>
+                    </ul>
+                </div>
+            </div><br><hr>
+
+            <div class="comment-c" id="comment-c">
+                <h2 class="h2-c-clor">Comments in C </h2><br>
+                <div>
+                    <p>
+                        In C programming, comments are used to annotate code to make it more understandable to humans
+                        without affecting the functionality of the program. Comments are ignored by the compiler during
+                        the compilation process. There are two main types of comments in C:</p>
+                </div>
+                <div>
+                    <div>
+                        <p><b>Single-line comments : </b>These comments are used to annotate a single line of code.</p>
+                        <div class="code-card">
+                            <div class="box-code">
+                                <pre>
+                                 // This is a single-line comment
+                                 int x = 5; // Initializing variable x
+                         </pre>
+                            </div>
+                        </div>
+                    </div><br>
+
+                    <div>
+                        <p><b>Multi-line comments:</b>These comments can span multiple lines and are enclosed within /*
+                            and */.</p>
+                        <div class="code-card">
+                            <div class="box-code">
+                                <pre>
+                                 /* This is a
+                                 multi-line comment */
+                              int y = 10; /* Initializing variable y */
+                         </pre>
+                            </div>
+                        </div>
+                    </div><br>
+                </div><hr>
+
+
+                <div class="format-specifier" id="format-specifier">
+                    <h2 class="h2-c-clor">format-specifier in C </h2><br>
+                    <p>
+
+                        In C programming, a format specifier is a special character that specifies the type of data to
+                        be input or output during input/output operations, such as printing to the screen or reading
+                        from a file. Format specifiers are used with functions like printf() and scanf() to tell the
+                        compiler how to interpret the data.
+                    </p>
+                    <p><b>Here are some common format specifiers in C:</b></p>
+                    <div>
+                        <ul>
+                            <li><strong>%d:</strong> Represents an integer value.</li>
+                            <li><strong>%f:</strong> Represents a floating-point value.</li>
+                            <li><strong>%c:</strong> Represents a single character</li>
+                            <li><strong>%s:</strong> Represents a string of characters.</li>
+                            <li><strong>%p:</strong> Represents a pointer value.</li>
+                            <li><strong>%x </strong>or %X: Represents an unsigned hexadecimal integer (lowercase or
+                                uppercase).</li>
+                        </ul>
+
+                    </div><br>
+                    <p>For example, in a printf() statement, if you want to print an integer variable num, you would use
+                        %d as the format specifier like this:</p>
+                    <div class="code-card">
+                        <div class="box-code">
+                            <pre>
+                                int num = 10;
+                                printf("The value of num is: %d\n", num);
+                     </pre>
+                        </div>
+                    </div>
+                    <p>For example, in a scanf() to read an integer value, you would use %d as the format specifier:</p>
+                    <div class="code-card">
+                        <div class="box-code">
+                            <pre>
+                                int num;
+                                scanf("%d", &num);
+                     </pre>
+                        </div>
+                    </div>
+                </div><hr>
+
+                <div class="Escape Sequence" id="Escape-Sequence">
+                    <h2 class="h2-c-clor">Escape Sequence in C </h2><br>
+                    <p>
+                        In C programming, an escape sequence is a sequence of characters that begins with a backslash \
+                        and is followed by one or more characters. Escape sequences are used to represent characters
+                        that are difficult or impossible to represent directly in a string or character constant.
+                    </p>
+                    <p><b>Here are some common escape sequences in C:</b></p>
+                    <div>
+                        <ul>
+                            <li><strong>\n:</strong> Newline character. Causes the cursor to move to the beginning of
+                                the next line.</li>
+                            <li><strong>\t:</strong> Tab character. Causes horizontal tabulation (indentation).</li>
+                            <li><strong>\b:</strong> Backspace character. Causes the cursor to move back one position.
+                            </li>
+                            <li><strong>\r:</strong> Carriage return. Causes the cursor to move to the beginning of the
+                                current line..</li>
+                            <li><strong>\\:</strong> Backslash character itself.</li>
+                            <li><strong>\':</strong> Single quote character.</li>
+                            <li><strong>\":</strong> Double quote character.</li>
+                            <li><strong>\0:</strong> Null character. Represents the null terminator character used to
+                                terminate strings.</li>
+                            <li><strong>\xH</strong>H: Hexadecimal escape sequence. Represents the character with the
+                                hexadecimal value HH.</li>
+                        </ul>
+
+                    </div><br>
+                    <p>Here's an example demonstrating the use of escape sequences:</p>
+                    <div class="code-card">
+                        <div class="box-code">
+                            <pre>
+                                #include <stdio.h>
+
+                                    int main() {
+                                        printf("Hello\tworld!\n");
+                                        printf("This is a backslash: \\ \n");
+                                        printf("This is a double quote: \" \n");
+                                        printf("This is a single quote: \' \n");
+                                        printf("This is a bell: \a \n");
+                                        return 0;
+                                    }
+                     </pre>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><strong>\t </strong>is used to insert a tab between "Hello" and "world!".</li>
+                        <li><strong>\\ </strong>is used to print a single backslash.</li>
+                        <li><strong>\" </strong>and \' are used to print double and single quotes, respectively.</li>
+                        <li><strong>\a </strong>is used to produce an audible alert (system dependent).</li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr>
+            <div class="ascii" id="ascii">
+                <h2 class="h2-c-clor">ASCII Value in C </h2><br>
+                <p>In C programming, you can represent characters using their ASCII (American Standard Code for
+                    Information Interchange) values. ASCII is a standard character encoding scheme that assigns
+                    numerical values to characters, including letters, digits, punctuation marks, and control
+                    characters. </p><br>
+                <p>To represent a character using its ASCII value, you can use the integer value of the character
+                    directly in your code. For example:
+
+                </p>
+                <div class="code-card">
+                    <div class="box-code">
+                        <pre>
+                            char ch = 'A';
+                            int ascii_value = ch;  // Assigns the ASCII value of 'A' to ascii_value
+                            printf("The ASCII value of %c is %d\n", ch, ascii_value);
+                 </pre>
+                    </div>
+                </div>
+                <p>This code will output:</p>
+                <div class="code-card">
+                    <div class="box-code">
+                        <pre>
+                                The ASCII value of A is 65
+                     </pre>
+                    </div>
+                </div>
+                <p>Here, the character 'A' has an ASCII value of 65. You can use this approach to find the ASCII value
+                    of any character.</p>
+                <p>Conversely, if you have an ASCII value and you want to get the corresponding character, you can
+                    simply assign the ASCII value to a character variable:</p>
+                <div class="code-card">
+                    <div class="box-code">
+                        <pre>
+                                    int ascii_value = 65;
+                                    char ch = ascii_value;  // Assigns the character corresponding to ASCII value 65 ('A') to ch
+                                    printf("The character corresponding to ASCII value %d is %c\n", ascii_value, ch);
+                         </pre>
+                    </div>
+                </div>
+                <p>This code will output:</p>
+                <div class="code-card">
+                    <div class="box-code">
+                        <pre>
+                                    The character corresponding to ASCII value 65 is A
+                         </pre>
+                    </div>
+                </div>
+            </div>
+             <hr>
+
+            <div class="constants" id="constants">
+                <h2 class="h2-c-clor">constants in C </h2><br>
+                <p>
+                    In C programming, constants are fixed values that do not change during the execution of a program. Constants can be of various types, including integer constants, floating-point constants, character constants, and string constants.</p>
+                    <p><b>Here are some examples of constants in C:</b></p>
+                    <p>1.<strong>Integer Constants:</strong> </p>
+                    <div class="code-card">
+                        <div class="box-code">
+                            <pre>
+                                const int MAX_SIZE = 100;
+                                #define MAX_SIZE 100
+                        </div>
+                    </div>
+                    <p>Both <b>const </b>and <b>> #define </b> be used to define integer constants. const is a keyword used to define a constant variable, while #define is a preprocessor directive used to define symbolic constants.
+
+                    </p><br>
+                    <p>2.<strong>Floating-Point Constants::</strong> </p>
+                    <div class="code-card">
+                        <div class="box-code">
+                            <pre>
+                                const float PI = 3.14159;
+
+                        </div>
+                    </div>
+                    <p>This defines a constant float value for PI.
+                    </p><br>
+                    <p>3.<strong>Character Constants:</strong> </p>
+                    <div class="code-card">
+                        <div class="box-code">
+                            <pre>
+                                const char NEWLINE = '\n';
+                                #define NEWLINE '\n'
+
+                        </div>
+                    </div>
+                    <p>These define constants for special characters like newline.
+                    </p><br>
+                    <p>These define string constants. In the first example, const char * declares a pointer to a constant character array, while in the second example, #define creates a macro for the string.</p><br>
+                    <p>Constants are useful for making code more readable, maintainable, and less error-prone, as they allow you to assign meaningful names to values that should not change during program execution. Using constants also facilitates easy modification of values in a program by changing the value at a single location, rather than searching and replacing multiple occurrences throughout the code.</p>
+                    
+
+            </div>    
+              <hr>
+            <div class="Literals" id="Literals">
+                <h2 class="h2-c-clor">Literals in C </h2><br>
+                <p>
+                    In C programming, literals are the constant values that are used directly in the code. They represent fixed values that do not change during the execution of the program. Literals can be of various types, including integer literals, floating-point literals, character literals, string literals, and boolean literals.</p>
+                <p><b>Here are some examples of literals in C:</b></p>
+                <p><strong>1 . Integer Literals:</strong></p>
+                <div class="code-card">
+                    <div class="box-code">
+                        <pre>
+                        
+                            int num = 10;
+
+                    </div>
+                </div>
+                <p>Here,<b> 10 </b>is an integer literal.</p>
+                <p><strong>2 . Floating-Point Literals:</strong></p>
+                <div class="code-card">
+                    <div class="box-code">
+                        <pre>
+                        
+                            float pi = 3.14;
+
+                    </div>
+                </div>
+                <p>Here,<b> 3.14 </b>is a floating-point literal.</p>
+                <p><strong>3 . Character Literals:</strong></p>
+                <div class="code-card">
+                    <div class="box-code">
+                        <pre>
+                        
+                            char ch = 'A';
+
+                    </div>
+                </div>
+                <p>Here,<b>A </b>is an character literal.</p>
+                <p><strong>4 . String Literals</strong></p>
+                <div class="code-card">
+                    <div class="box-code">
+                        <pre>
+                        
+                            char *str = "Hello, world!";
+
+                    </div>
+                </div>
+                <p>Here,<b> Hello, world! </b>is an String Literals.</p>
+                <p><strong>5 . Boolean Literals (C99 and later):</strong></p>
+                <div class="code-card">
+                    <div class="box-code">
+                        <pre>
+                        
+                            _Bool b = 1; // true
+
+                    </div>
+                </div>
+                <p>In C99 and later <b> _Bool </b>is the built-in data type for boolean values. <b>1</b> represents true, and 0 represents false.</p>
+                <p><strong>3 . Hexadecimal and Octal Literals:</strong></p>
+                <div class="code-card">
+                    <div class="box-code">
+                        <pre>
+                        
+                            int hex = 0xA; // Hexadecimal literal
+                            int oct = 012; // Octal literal
+
+                    </div>
+                </div>
+                <p>Here, <b>0xA </b> is a hexadecimal literal (equivalent to 10 in decimal), and<b> 012 </b>is an octal literal (equivalent to 10 in decimal).</p>
+                <p><strong>7 . Scientific Notation for Floating-Point Literals:</strong></p>
+                <div class="code-card">
+                    <div class="box-code">
+                        <pre>
+                        
+                            float scientific = 1.23e3;
+
+                    </div>
+                </div>
+                <p>Here, <b>1.23e3</b>represents 1.23 multiplied by 10 raised to the power of 3 (1230.0).</p>
+            </div>    
+
+            </div>    
+
+
+
+
+
+
+        </div> <!-- //end line for center -->
+
+
+
+
+        <div class="right-side">
+
+            <div class="image1">
+                <img src="https://cdn.pixabay.com/photo/2017/08/25/13/36/code-geek-2680204_640.png" alt="cofee"
+                    srcset="" height="300px">
+            </div>
+
+            <div class="image2">
+                <img src="https://cdn.pixabay.com/photo/2014/08/14/10/38/software-417880_640.jpg" alt="software"
+                    srcset="" height="300px" style="mix-blend-mode: multiply;">
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+    </main>
+</body>
+<script>
+    const btn = document.getElementById("menu")
+    const left = document.getElementById("side")
+    const leftbtn = document.querySelector("#btn-c");
+
+    btn.addEventListener('click', () => {
+        if (left.style.display == "none") {
+            left.style.display = "block"
+        } else {
+            left.style.display = "none";
+        }
+    });
+
+
+</script>
+
+<script>
+    let menuleft = document.getElementById("side")
+    function btnn() {
+        if (menuleft.style.display == "block") {
+            menuleft.style.display = "none"
+        }
+
+    }
+</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+
+</html>

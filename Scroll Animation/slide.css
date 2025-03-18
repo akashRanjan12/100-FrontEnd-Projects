@@ -32,11 +32,12 @@ section {
   opacity: 1;
 }
 .sec-2 .animate {
-  transform: translateX(40vw);
+  background-color: red;
+  transform: translatey(0vw);
   opacity: 0;
 }
 .sec-2.show .animate {
-  transform: translateX(0);
+  transform: translatey(-40);
   opacity: 1;
 }
 .sec-3 .animate {

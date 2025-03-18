@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image to Text Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Image to Text Generator</h1>
+      <input type="file" id="imageInput" accept="image/*" />
+      <div id="imageContainer">
+        <img
+          id="previewImage"
+          src="#"
+          alt="Image Preview"
+          style="display: none" />
+      </div>
+      <button id="convertButton">Convert to Text</button>
+      <div id="textOutput"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.4/dist/tesseract.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
