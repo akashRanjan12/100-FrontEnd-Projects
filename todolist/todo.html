@@ -1,47 +1,461 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ToDoList</title>
+    <title>Smart To-Do</title>
     <style>
-      .box1 {
+      :root {
+        color-scheme: dark;
+        --bg: #07111f;
+        --card: rgba(10, 24, 44, 0.9);
+        --border: rgba(255, 255, 255, 0.12);
+        --text: #f3f7ff;
+        --muted: #8ea1bc;
+        --accent: #5ee7d5;
+        --accent-strong: #3fc8b8;
+        --danger: #ff6b6b;
+        --shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #07111f, #142845 55%, #244f70);
+        color: var(--text);
+        display: grid;
+        place-items: center;
+        padding: 20px;
+      }
+
+      .app {
+        width: min(760px, 100%);
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 24px;
+        box-shadow: var(--shadow);
+        -webkit-backdrop-filter: blur(18px);
+        backdrop-filter: blur(18px);
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .hero {
         display: flex;
-        gap: 20px;
-        input {
-          height: 30px;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 20px;
+      }
+
+      .hero h1 {
+        margin: 0 0 6px;
+        font-size: clamp(1.4rem, 2.3vw, 2rem);
+      }
+
+      .hero p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .date-pill {
+        background: rgba(94, 231, 213, 0.16);
+        color: var(--accent);
+        padding: 10px 14px;
+        border-radius: 999px;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+
+      .form-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+
+      .form-row input {
+        flex: 1 1 220px;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--text);
+        border-radius: 14px;
+        padding: 14px 16px;
+        font-size: 1rem;
+        outline: none;
+      }
+
+      .form-row input::placeholder {
+        color: #9ab0c9;
+      }
+
+      .form-row button {
+        border: none;
+        border-radius: 14px;
+        background: linear-gradient(
+          135deg,
+          var(--accent),
+          var(--accent-strong)
+        );
+        color: #00131c;
+        padding: 14px 18px;
+        font-weight: 700;
+        cursor: pointer;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      .form-row button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 10px 25px rgba(62, 200, 184, 0.25);
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+
+      .stat-card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 12px 14px;
+      }
+
+      .stat-card strong {
+        display: block;
+        font-size: 1.1rem;
+        margin-top: 2px;
+      }
+
+      .filters {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 16px;
+        flex-wrap: wrap;
+      }
+
+      .filter-btn {
+        border: 1px solid var(--border);
+        background: transparent;
+        color: var(--text);
+        border-radius: 999px;
+        padding: 8px 12px;
+        cursor: pointer;
+      }
+
+      .filter-btn.active {
+        background: rgba(94, 231, 213, 0.18);
+        color: var(--accent);
+        border-color: rgba(94, 231, 213, 0.35);
+      }
+
+      .task-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .task-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 14px 16px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--border);
+      }
+
+      .task-main {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 0;
+        flex: 1;
+      }
+
+      .task-main input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        accent-color: var(--accent-strong);
+        cursor: pointer;
+      }
+
+      .task-text {
+        min-width: 0;
+      }
+
+      .task-text strong {
+        display: block;
+        margin-bottom: 4px;
+        word-break: break-word;
+      }
+
+      .task-text span {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .task-item.completed .task-text strong {
+        text-decoration: line-through;
+        color: var(--muted);
+      }
+
+      .task-actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .task-actions button {
+        border: none;
+        background: rgba(255, 107, 107, 0.16);
+        color: #ffd4d4;
+        padding: 8px 10px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      .empty-state {
+        text-align: center;
+        padding: 24px 12px;
+        color: var(--muted);
+        border: 1px dashed var(--border);
+        border-radius: 16px;
+      }
+
+      @media (max-width: 600px) {
+        .app {
+          padding: 18px;
         }
-        button {
-          padding: 8px;
+
+        .hero {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .stats {
+          grid-template-columns: 1fr;
+        }
+
+        .task-item {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .task-actions {
+          width: 100%;
+          justify-content: flex-end;
         }
       }
     </style>
   </head>
   <body>
-    <div class="box1">
-      <input type="text" class="input" />
-      <input type="date" calss="date" />
-      <button id="addbtn">ADD</button>
-    </div>
-    <div class="getnewdata"></div>
-    <script>
-      var objval = [
-        {
-          todo: "",
-          date: "",
-        },
-      ];
-      var addEl = document.getElementById("addbtn");
-      addEl.addEventListener("click", () => {
-        var inputEl = document.querySelector(".input").value;
-        var inputEl = document.querySelector(".date").value;
+    <main class="app">
+      <section class="hero">
+        <div>
+          <h1>Focus on what matters</h1>
+          <p>Plan your day with a calm, modern to-do board.</p>
+        </div>
+        <div class="date-pill" id="todayLabel"></div>
+      </section>
 
-        objval.push({
-          todo,
-          date,
+      <form class="form-row" id="todoForm">
+        <label class="sr-only" for="taskInput">Task name</label>
+        <input
+          id="taskInput"
+          type="text"
+          placeholder="What needs to be done?"
+          required />
+        <label class="sr-only" for="taskDate">Task date</label>
+        <input id="taskDate" type="date" />
+        <button type="submit">Add task</button>
+      </form>
+
+      <section class="stats">
+        <div class="stat-card">
+          <span>Total</span>
+          <strong id="totalCount">0</strong>
+        </div>
+        <div class="stat-card">
+          <span>Completed</span>
+          <strong id="completedCount">0</strong>
+        </div>
+        <div class="stat-card">
+          <span>Pending</span>
+          <strong id="pendingCount">0</strong>
+        </div>
+      </section>
+
+      <section class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="active">Active</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+      </section>
+
+      <section class="task-list" id="taskList"></section>
+    </main>
+
+    <script>
+      const storageKey = "smart-todo-items-v1";
+      const taskInput = document.getElementById("taskInput");
+      const taskDate = document.getElementById("taskDate");
+      const taskList = document.getElementById("taskList");
+      const totalCount = document.getElementById("totalCount");
+      const completedCount = document.getElementById("completedCount");
+      const pendingCount = document.getElementById("pendingCount");
+      const form = document.getElementById("todoForm");
+      const todayLabel = document.getElementById("todayLabel");
+      const filterButtons = Array.from(
+        document.querySelectorAll(".filter-btn"),
+      );
+
+      let todos = JSON.parse(localStorage.getItem(storageKey) || "[]");
+      let currentFilter = "all";
+
+      function saveTodos() {
+        localStorage.setItem(storageKey, JSON.stringify(todos));
+      }
+
+      function formatDate(dateValue) {
+        if (!dateValue) return "No deadline";
+        const date = new Date(dateValue + "T00:00:00");
+        return new Intl.DateTimeFormat("en", {
+          month: "short",
+          day: "numeric",
+          year: "numeric",
+        }).format(date);
+      }
+
+      function render() {
+        const filteredTodos = todos.filter((todo) => {
+          if (currentFilter === "active") return !todo.completed;
+          if (currentFilter === "completed") return todo.completed;
+          return true;
         });
-        document.querySelector(".input").value = "";
+
+        totalCount.textContent = todos.length;
+        completedCount.textContent = todos.filter(
+          (todo) => todo.completed,
+        ).length;
+        pendingCount.textContent = todos.filter(
+          (todo) => !todo.completed,
+        ).length;
+
+        if (!filteredTodos.length) {
+          taskList.innerHTML =
+            '<div class="empty-state">No tasks here yet. Add one to get started.</div>';
+          return;
+        }
+
+        taskList.innerHTML = filteredTodos
+          .map((todo) => {
+            const checked = todo.completed ? "checked" : "";
+            return `
+              <article class="task-item ${todo.completed ? "completed" : ""}">
+                <div class="task-main">
+                  <input type="checkbox" ${checked} data-id="${todo.id}" />
+                  <div class="task-text">
+                    <strong>${todo.text}</strong>
+                    <span>${formatDate(todo.date)}</span>
+                  </div>
+                </div>
+                <div class="task-actions">
+                  <button data-delete-id="${todo.id}" type="button">Delete</button>
+                </div>
+              </article>
+            `;
+          })
+          .join("");
+      }
+
+      function addTodo(event) {
+        event.preventDefault();
+        const text = taskInput.value.trim();
+        if (!text) return;
+
+        todos.unshift({
+          id: Date.now(),
+          text,
+          date: taskDate.value,
+          completed: false,
+        });
+
+        saveTodos();
+        render();
+        form.reset();
+        taskInput.focus();
+      }
+
+      function toggleTodo(id) {
+        todos = todos.map((todo) =>
+          todo.id === Number(id)
+            ? { ...todo, completed: !todo.completed }
+            : todo,
+        );
+        saveTodos();
+        render();
+      }
+
+      function deleteTodo(id) {
+        todos = todos.filter((todo) => todo.id !== Number(id));
+        saveTodos();
+        render();
+      }
+
+      form.addEventListener("submit", addTodo);
+      taskList.addEventListener("click", (event) => {
+        const deleteButton = event.target.closest("[data-delete-id]");
+        if (deleteButton) {
+          deleteTodo(deleteButton.getAttribute("data-delete-id"));
+          return;
+        }
       });
+
+      taskList.addEventListener("change", (event) => {
+        const checkbox = event.target.closest("input[type='checkbox']");
+        if (checkbox) {
+          toggleTodo(checkbox.getAttribute("data-id"));
+        }
+      });
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          currentFilter = button.dataset.filter;
+          filterButtons.forEach((btn) =>
+            btn.classList.toggle("active", btn === button),
+          );
+          render();
+        });
+      });
+
+      todayLabel.textContent = new Intl.DateTimeFormat("en", {
+        weekday: "long",
+        month: "short",
+        day: "numeric",
+      }).format(new Date());
+
+      render();
     </script>
   </body>
 </html>

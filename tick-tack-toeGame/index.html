@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="msg-container hide">
+      <div class="msg-card">
+        <p id="msg">Winner</p>
+        <button id="new-btn">New Game</button>
+      </div>
+    </div>
+
+    <div class="game-shell">
+      <header class="hero">
+        <p class="badge">⚡ Arcade Challenge</p>
+        <h1>Tic-Tac-Toe</h1>
+        <p class="subtitle">Line up three symbols and claim the board.</p>
+      </header>
+
+      <main class="game-area">
+        <section class="board-panel">
+          <div class="status-bar">
+            <span id="status-text">Player O's turn</span>
+            <span class="turn-pill">Turn</span>
+          </div>
+
+          <div class="container">
+            <div class="game">
+              <button class="box"></button>
+              <button class="box"></button>
+              <button class="box"></button>
+              <button class="box"></button>
+              <button class="box"></button>
+              <button class="box"></button>
+              <button class="box"></button>
+              <button class="box"></button>
+              <button class="box"></button>
+            </div>
+          </div>
+        </section>
+
+        <aside class="side-panel">
+          <div class="info-card">
+            <h2>How to play</h2>
+            <p>
+              Take turns placing your symbol. First to make three in a row wins.
+            </p>
+          </div>
+
+          <div class="scoreboard">
+            <h2>Scoreboard</h2>
+            <div class="score-row">
+              <span>You</span>
+              <span id="player-score">0</span>
+            </div>
+            <div class="score-row">
+              <span>Computer</span>
+              <span id="computer-score">0</span>
+            </div>
+            <div class="score-row">
+              <span>Draws</span>
+              <span id="draw-score">0</span>
+            </div>
+          </div>
+
+          <div class="action-group">
+            <button class="reset">Reset Game</button>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

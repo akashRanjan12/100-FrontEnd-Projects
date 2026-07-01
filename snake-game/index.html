@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Rush</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <header class="hero">
+        <p class="badge">⚡ Arcade Challenge</p>
+        <h1>Snake Rush</h1>
+        <p class="subtitle">
+          Guide the snake, eat the glowing food, and grow longer.
+        </p>
+      </header>
+
+      <section class="stats-row">
+        <div class="stat-card">
+          <span>Score</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="stat-card">
+          <span>Best</span>
+          <strong id="best-score">0</strong>
+        </div>
+        <button id="pause-btn" class="secondary-btn">Pause</button>
+      </section>
+
+      <section class="board-card" id="board-card">
+        <canvas id="gameCanvas" width="420" height="420"></canvas>
+        <div class="touch-hint">Swipe on the board to steer</div>
+
+        <div class="overlay" id="overlay">
+          <div class="overlay-card">
+            <h2 id="overlay-title">Snake Rush</h2>
+            <p id="overlay-text">
+              Use the arrow keys or the on-screen buttons to start the chase.
+            </p>
+            <button id="start-btn">Start Game</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="controls" aria-label="Game controls">
+        <button class="control-btn" data-dir="up">▲</button>
+        <div class="controls-row">
+          <button class="control-btn" data-dir="left">◀</button>
+          <button class="control-btn" data-dir="down">▼</button>
+          <button class="control-btn" data-dir="right">▶</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

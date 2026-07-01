@@ -1,20 +1,12 @@
 # Target 100 FrontEnd Projects
 
 <ol>
-  <li>slider animation</li>
-      <li>Scroll animation</li>
-      <li>Grocery calculator</li>
-      <li>Simple Calculator</li>
-      <li>Mouse Move Cursor Effect</li>
-      <li>Unit convertor</li>
-      <li>question back</li>
-      <li>Sweet shop</li>
-      <li>mini calender</li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
+      <li>To-do List</li>
+      <li>Unit Converter</li>
+      <li>Time and calender display</li>
+      <li>Snake Game</li>
+      <li>Stone paper scissor Game</li>
+      <li>Tic tack toe Game</li>
       <li></li>
       <li></li>
       <li></li>

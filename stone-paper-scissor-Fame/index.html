@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Rock Paper Scissors</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <header class="hero">
+        <p class="badge">⚡ Arcade Challenge</p>
+        <h1>Stone • Paper • Scissors</h1>
+        <p class="subtitle">
+          Choose your move and beat the computer in a stylish neon showdown.
+        </p>
+      </header>
+
+      <main class="game-area">
+        <section class="player-panel">
+          <h2>Your Move</h2>
+          <div class="move-container">
+            <button
+              class="choice-card rock playerbox"
+              onclick="checkmove('rock')">
+              <i class="fa-solid fa-hand-back-fist"></i>
+              <span>Rock</span>
+            </button>
+            <button
+              class="choice-card paper playerbox"
+              onclick="checkmove('paper')">
+              <i class="fa-solid fa-hand"></i>
+              <span>Paper</span>
+            </button>
+            <button
+              class="choice-card scissor playerbox"
+              onclick="checkmove('scissor')">
+              <i class="fa-solid fa-hand-scissors"></i>
+              <span>Scissor</span>
+            </button>
+          </div>
+        </section>
+
+        <aside class="status-panel">
+          <div class="result-bubble" id="result-bubble">
+            <span class="result-label">Round Result</span>
+            <span id="store-res">Pick your move to start the battle.</span>
+          </div>
+
+          <div class="scoreboard">
+            <div class="score-card">
+              <span class="score-title">Wins</span>
+              <span class="score-value" id="win-score">0</span>
+            </div>
+            <div class="score-card">
+              <span class="score-title">Losses</span>
+              <span class="score-value" id="losses-score">0</span>
+            </div>
+            <div class="score-card">
+              <span class="score-title">Ties</span>
+              <span class="score-value" id="ties-score">0</span>
+            </div>
+          </div>
+
+          <button id="reset-btn" onclick="resetscore()">
+            <span class="icon">↻</span>
+            <span>Reset Game</span>
+          </button>
+        </aside>
+      </main>
+    </div>
+
+    <script src="logic.js"></script>
+  </body>
+</html>

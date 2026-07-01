@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glow Time & Calendar</title>
+    <style>
+      :root {
+        --bg-1: #060816;
+        --bg-2: #111936;
+        --panel: rgba(255, 255, 255, 0.12);
+        --panel-strong: rgba(255, 255, 255, 0.18);
+        --text: #f4f7ff;
+        --muted: #a9b5d2;
+        --accent: #7ad7ff;
+        --accent-2: #af7bff;
+        --accent-3: #ff7ab6;
+        --border: rgba(255, 255, 255, 0.18);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: radial-gradient(
+          circle at top left,
+          #1e2f6a,
+          var(--bg-1) 42%,
+          var(--bg-2)
+        );
+        color: var(--text);
+        display: grid;
+        place-items: center;
+        padding: 20px;
+      }
+
+      .app-shell {
+        width: min(1100px, 100%);
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 20px;
+      }
+
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 26px;
+        padding: 24px;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        overflow: hidden;
+      }
+
+      .clock-card {
+        position: relative;
+        min-height: 460px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .clock-card::before {
+        content: "";
+        position: absolute;
+        inset: -30px;
+        background: radial-gradient(
+          circle,
+          rgba(122, 215, 255, 0.23),
+          transparent 60%
+        );
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      .clock-card > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.08);
+        color: var(--accent);
+        width: fit-content;
+        font-size: 0.9rem;
+      }
+
+      .eyebrow::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--accent), var(--accent-3));
+        box-shadow: 0 0 12px var(--accent);
+      }
+
+      .greeting {
+        font-size: clamp(1.2rem, 3vw, 1.7rem);
+        font-weight: 600;
+        margin: 12px 0 8px;
+      }
+
+      .time {
+        font-size: clamp(3rem, 8vw, 5.5rem);
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        margin: 8px 0 10px;
+      }
+
+      .date {
+        color: var(--muted);
+        font-size: 1.05rem;
+        margin-bottom: 10px;
+      }
+
+      .status-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .pill {
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.08);
+        color: var(--text);
+        font-size: 0.95rem;
+      }
+
+      .calendar-card {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .calendar-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      .calendar-head h2 {
+        margin: 0;
+        font-size: 1.25rem;
+      }
+
+      .calendar-head button {
+        border: none;
+        background: rgba(255, 255, 255, 0.12);
+        color: var(--text);
+        border-radius: 12px;
+        width: 38px;
+        height: 38px;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+
+      .weekday-row,
+      .day-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 8px;
+      }
+
+      .weekday {
+        text-align: center;
+        color: var(--muted);
+        font-weight: 600;
+        font-size: 0.85rem;
+        padding-bottom: 8px;
+      }
+
+      .day {
+        aspect-ratio: 1;
+        border: 1px solid transparent;
+        border-radius: 14px;
+        display: grid;
+        place-items: center;
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--text);
+        cursor: pointer;
+        transition:
+          transform 0.2s ease,
+          background 0.2s ease,
+          border-color 0.2s ease;
+      }
+
+      .day:hover {
+        transform: translateY(-2px);
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .day.other-month {
+        color: rgba(255, 255, 255, 0.35);
+      }
+
+      .day.today {
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        color: #07111f;
+        font-weight: 700;
+        border-color: rgba(255, 255, 255, 0.35);
+      }
+
+      .day.selected {
+        border-color: var(--accent-3);
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+      }
+
+      .selected-info {
+        margin-top: 18px;
+        padding: 14px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.07);
+        color: var(--muted);
+      }
+
+      .selected-info strong {
+        display: block;
+        color: var(--text);
+        margin-bottom: 4px;
+        font-size: 1rem;
+      }
+
+      @media (max-width: 860px) {
+        .app-shell {
+          grid-template-columns: 1fr;
+        }
+
+        .clock-card {
+          min-height: auto;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .card {
+          padding: 18px;
+        }
+
+        .time {
+          font-size: 2.7rem;
+        }
+
+        .day {
+          border-radius: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="card clock-card">
+        <div>
+          <div class="eyebrow">Live time & mood</div>
+          <h1 class="greeting" id="greeting">Hello there</h1>
+          <div class="time" id="clock">--:--:--</div>
+          <div class="date" id="fullDate">Loading date...</div>
+          <div class="status-row">
+            <div class="pill" id="timezoneLabel">Timezone: --</div>
+            <div class="pill" id="dayLabel">Day: --</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card calendar-card">
+        <div class="calendar-head">
+          <h2 id="monthLabel">Month</h2>
+          <div>
+            <button id="prevBtn" aria-label="Previous month">←</button>
+            <button id="nextBtn" aria-label="Next month">→</button>
+          </div>
+        </div>
+
+        <div class="weekday-row" id="weekdayRow"></div>
+        <div class="day-grid" id="dayGrid"></div>
+
+        <div class="selected-info" id="selectedInfo">
+          <strong>Select a day</strong>
+          <span>Choose any date to preview it here.</span>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const clockEl = document.getElementById("clock");
+      const greetingEl = document.getElementById("greeting");
+      const fullDateEl = document.getElementById("fullDate");
+      const timezoneLabel = document.getElementById("timezoneLabel");
+      const dayLabel = document.getElementById("dayLabel");
+      const monthLabel = document.getElementById("monthLabel");
+      const weekdayRow = document.getElementById("weekdayRow");
+      const dayGrid = document.getElementById("dayGrid");
+      const selectedInfo = document.getElementById("selectedInfo");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+
+      let currentMonth = new Date();
+      let selectedDate = new Date();
+
+      function updateClock() {
+        const now = new Date();
+        const hours = now.getHours().toString().padStart(2, "0");
+        const minutes = now.getMinutes().toString().padStart(2, "0");
+        const seconds = now.getSeconds().toString().padStart(2, "0");
+
+        clockEl.textContent = `${hours}:${minutes}:${seconds}`;
+        fullDateEl.textContent = now.toLocaleDateString("en", {
+          weekday: "long",
+          month: "long",
+          day: "numeric",
+          year: "numeric",
+        });
+        timezoneLabel.textContent = `Timezone: ${Intl.DateTimeFormat().resolvedOptions().timeZone}`;
+        dayLabel.textContent = `Day: ${now.toLocaleDateString("en", { weekday: "long" })}`;
+
+        const hour = now.getHours();
+        if (hour < 12) {
+          greetingEl.textContent = "Good morning, let’s begin";
+        } else if (hour < 18) {
+          greetingEl.textContent = "Good afternoon, stay in flow";
+        } else {
+          greetingEl.textContent = "Good evening, time to unwind";
+        }
+      }
+
+      function renderCalendar() {
+        const year = currentMonth.getFullYear();
+        const month = currentMonth.getMonth();
+
+        monthLabel.textContent = currentMonth.toLocaleDateString("en", {
+          month: "long",
+          year: "numeric",
+        });
+
+        const firstDay = new Date(year, month, 1);
+        const lastDay = new Date(year, month + 1, 0);
+        const startDay = firstDay.getDay();
+        const totalDays = lastDay.getDate();
+        const prevMonthLastDay = new Date(year, month, 0).getDate();
+
+        const weekdayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+        weekdayRow.innerHTML = weekdayNames
+          .map((day) => `<div class="weekday">${day}</div>`)
+          .join("");
+
+        const days = [];
+        for (let i = startDay - 1; i >= 0; i -= 1) {
+          days.push({
+            date: new Date(year, month - 1, prevMonthLastDay - i),
+            isCurrentMonth: false,
+          });
+        }
+
+        for (let day = 1; day <= totalDays; day += 1) {
+          days.push({
+            date: new Date(year, month, day),
+            isCurrentMonth: true,
+          });
+        }
+
+        const remaining = 42 - days.length;
+        for (let day = 1; day <= remaining; day += 1) {
+          days.push({
+            date: new Date(year, month + 1, day),
+            isCurrentMonth: false,
+          });
+        }
+
+        dayGrid.innerHTML = days
+          .map((item) => {
+            const date = item.date;
+            const isToday = date.toDateString() === new Date().toDateString();
+            const isSelected =
+              date.toDateString() === selectedDate.toDateString();
+            return `
+              <button
+                class="day ${item.isCurrentMonth ? "" : "other-month"} ${isToday ? "today" : ""} ${isSelected ? "selected" : ""}"
+                data-date="${date.toISOString()}"
+              >
+                ${date.getDate()}
+              </button>
+            `;
+          })
+          .join("");
+      }
+
+      function updateSelectedInfo() {
+        selectedInfo.innerHTML = `
+          <strong>${selectedDate.toLocaleDateString("en", {
+            weekday: "long",
+            month: "long",
+            day: "numeric",
+            year: "numeric",
+          })}</strong>
+          <span>${selectedDate.toDateString() === new Date().toDateString() ? "Today is your highlight moment." : "A calm moment waiting to be filled."}</span>
+        `;
+      }
+
+      prevBtn.addEventListener("click", () => {
+        currentMonth = new Date(
+          currentMonth.getFullYear(),
+          currentMonth.getMonth() - 1,
+          1,
+        );
+        renderCalendar();
+      });
+
+      nextBtn.addEventListener("click", () => {
+        currentMonth = new Date(
+          currentMonth.getFullYear(),
+          currentMonth.getMonth() + 1,
+          1,
+        );
+        renderCalendar();
+      });
+
+      dayGrid.addEventListener("click", (event) => {
+        const button = event.target.closest(".day");
+        if (!button) return;
+        selectedDate = new Date(button.dataset.date);
+        renderCalendar();
+        updateSelectedInfo();
+      });
+
+      updateClock();
+      setInterval(updateClock, 1000);
+      renderCalendar();
+      updateSelectedInfo();
+    </script>
+  </body>
+</html>
