@@ -1,0 +1,9 @@
+AuthType Basic
+AuthName "Restricted Area"
+AuthUserFile C:/xampp/htdocs/Blog_Website/admin/.htpasswd
+Require valid-user
+
+<Files ".htpasswd">
+    Order allow,deny
+    Deny from all
+</Files>

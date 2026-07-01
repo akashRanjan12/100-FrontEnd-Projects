@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Live Camera Feed</h2>
+    <video id="video" width="640" height="480" autoplay></video>
+
+    <script>
+      const video = document.getElementById("video");
+
+      // Ask for permission and access the camera
+      navigator.mediaDevices
+        .getUserMedia({ video: true, audio: false })
+        .then((stream) => {
+          video.srcObject = stream;
+        })
+        .catch((error) => {
+          console.error("Error accessing camera: ", error);
+        });
+    </script>
+  </body>
+</html>

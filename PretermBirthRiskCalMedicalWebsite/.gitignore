@@ -1,0 +1,170 @@
+# ============================================
+# Medical Risk Assessment System .gitignore
+# ============================================
+
+# -------------------------------
+# PHP & Server Configuration
+# -------------------------------
+*.log
+*.sql
+*.sql.gz
+*.sql.zip
+*.cache
+*.pid
+*.lock
+config.php
+.env
+.env.local
+.env.production
+.env.development
+
+# -------------------------------
+# IDE & Editor Files
+# -------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+*.sublime-*
+.project
+.classpath
+.settings/
+
+# -------------------------------
+# XAMPP Specific
+# -------------------------------
+xampp/
+php_error.log
+apache_error.log
+mysql_error.log
+
+# -------------------------------
+# Database Files
+# -------------------------------
+*.db
+*.sqlite
+*.sqlite3
+backups/
+database_backup.sql
+medical_risk_db.sql
+
+# -------------------------------
+# Uploaded Files & Media
+# -------------------------------
+uploads/
+uploads/*
+!uploads/.gitkeep
+images/uploads/
+temp/
+tmp/
+*.tmp
+
+# -------------------------------
+# Dependencies & Packages
+# -------------------------------
+vendor/
+node_modules/
+composer.lock
+package-lock.json
+yarn.lock
+composer.phar
+
+# -------------------------------
+# Build & Distribution
+# -------------------------------
+dist/
+build/
+release/
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# -------------------------------
+# OS Generated Files
+# -------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.tmp
+*.bak
+*.old
+*.orig
+
+# -------------------------------
+# Debug & Testing
+# -------------------------------
+debug.log
+error_log
+debug/
+test/
+tests/
+coverage/
+phpunit.xml
+*.code-workspace
+
+# -------------------------------
+# Security Sensitive Files
+# -------------------------------
+*.key
+*.pem
+*.crt
+*.csr
+*.secret
+*.password
+.htpasswd
+.htaccess.bak
+config.inc.php
+
+# -------------------------------
+# Cache & Sessions
+# -------------------------------
+cache/
+sessions/
+session_data/
+temp/
+tmp/
+*.cache
+
+# -------------------------------
+# Project Specific
+# -------------------------------
+# Local configuration
+includes/config.local.php
+includes/database.local.php
+
+# Backup files
+*.backup
+*.old
+*.orig
+
+# Logs
+logs/
+*.log
+!logs/.gitkeep
+
+# Uploaded patient documents
+documents/
+patient_uploads/
+
+# API keys
+apikeys.php
+secrets.php
+
+# Development tools
+.vagrant/
+docker-compose.override.yml
+
+# -------------------------------
+# Keep empty directories
+# -------------------------------
+!.gitkeep
+!.gitignore

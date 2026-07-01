@@ -1,0 +1,326 @@
+* {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+body {
+  background-color: #010312;
+  color: whitesmoke;
+}
+/* select text effect For most modern browsers */
+::selection {
+  background: #7f00ff;
+  color: white; /* Optional: makes text more readable */
+}
+
+/* For Firefox specifically */
+::-moz-selection {
+  background: #7f00ff;
+  color: white;
+}
+/* scroll bar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/* end scroll bar */
+/* scroll eff---------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* anchor buttons */
+.white-btn {
+  font-size: 1.2rem;
+  background-color: whitesmoke;
+  color: black;
+  width: max-content;
+  padding: 5px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid whitesmoke;
+
+  &:hover {
+    background-color: #000;
+    color: whitesmoke;
+  }
+}
+.transparent-btn {
+  font-size: 1.2rem;
+  width: max-content;
+  background-color: transparent;
+  color: white;
+  padding: 5px 10px;
+  border: 1px solid white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+}
+/* preloader---------------------------------------------------------- */
+#preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #010312;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  flex-direction: column;
+  gap: 10px;
+  h1,
+  h3 {
+    color: white;
+  }
+  p {
+    font-size: 5rem;
+    color: whitesmoke;
+  }
+}
+.fa-guitar {
+  font-size: 7rem;
+  color: whitesmoke;
+}
+.loading svg polyline {
+  fill: none;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.loading svg polyline#back {
+  fill: none;
+  stroke: #ff4d5033;
+}
+
+.loading svg polyline#front {
+  fill: none;
+  stroke: #ff4d4f;
+  stroke-dasharray: 48, 144;
+  stroke-dashoffset: 192;
+  animation: dash_682 1.4s linear infinite;
+}
+
+@keyframes dash_682 {
+  72.5% {
+    opacity: 0;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* end preloader--------------------- */
+/* sigin part css------------------------------------------------ */
+.form-container {
+  height: 90svh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .container {
+    width: 400px;
+    height: 500px;
+    background: transparent;
+    position: relative;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.438);
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .card {
+    cursor: default;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    letter-spacing: 2px;
+    color: whitesmoke;
+    background-color: rgba(255, 255, 255, 0.074);
+    border: 1px solid rgba(255, 255, 255, 0.222);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    transition: all ease 0.3s;
+    .logo {
+      color: whitesmoke;
+      font-size: 34px;
+      text-transform: uppercase;
+    }
+    #Psize {
+      font-size: 1rem;
+      color: whitesmoke;
+      text-align: center;
+      a {
+        &:hover {
+          color: blue;
+        }
+      }
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      .white-btn {
+        margin: 5px;
+        padding: 4px 30px;
+      }
+      #wid {
+        background-color: transparent;
+        box-shadow: 0 0 0.4vw rgba(255, 255, 255, 0.5), 0 0 0 0.15vw transparent;
+        border-radius: 4px;
+        border: none;
+        outline: none;
+        padding: 4px 8px;
+        width: 270px;
+        height: 30px;
+        transition: 0.4s;
+        color: whitesmoke;
+        font-size: 1.1rem;
+      }
+      #wid:hover {
+        box-shadow: 0 0 0 0.15vw rgba(135, 207, 235, 0.186);
+      }
+
+      #wid:focus {
+        box-shadow: 0 0 0 0.15vw skyblue;
+      }
+    }
+  }
+
+  .container::after,
+  .container::before {
+    width: 100px;
+    height: 100px;
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    transition: 0.5s linear;
+  }
+
+  .container::after {
+    top: -15px;
+    left: -15px;
+    background-color: rgba(149, 0, 255, 0.603);
+    animation: animFirst 5s linear infinite;
+  }
+
+  .container::before {
+    background-color: rgb(21, 255, 0);
+    top: 85%;
+    left: 75%;
+    animation: animSecond 5s linear infinite;
+    animation-delay: 5s;
+  }
+
+  .container:hover {
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.432);
+  }
+
+  .container:hover::after {
+    left: 300px;
+    transform: scale(1.2);
+  }
+
+  .container:hover::before {
+    left: -10px;
+    transform: scale(1.2);
+  }
+}
+/* end of sigin part css----------------------------------- */
+/* media querries--------------------------- */
+@media screen and (max-width: 512px) {
+  #preloader {
+    h1,
+    h3 {
+      text-align: center;
+      color: white;
+    }
+    p {
+      font-size: 2rem;
+      color: whitesmoke;
+    }
+  }
+  /* sigin container part */
+  .form-container {
+    height: auto;
+    padding-top: 70px;
+    padding-bottom: 0px;
+    .container {
+      width: 365px;
+      /* height: 400px; */
+      .card {
+        form {
+          #wid {
+            width: 240px;
+            height: 35px;
+          }
+        }
+      }
+    }
+    .container:hover::after {
+      left: 280px;
+      transform: scale(1.2);
+    }
+  }
+}
+@media screen and (max-width: 360px) {
+  .form-container {
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    .container {
+      width: 300px;
+      height: 470px;
+      .card {
+        form {
+          #wid {
+            width: 240px;
+            height: 35px;
+          }
+        }
+      }
+    }
+    .container:hover::after {
+      left: 220px;
+      transform: scale(1.2);
+    }
+  }
+}
